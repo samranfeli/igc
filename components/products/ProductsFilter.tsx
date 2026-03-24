@@ -264,7 +264,7 @@ const ProductsFilter: React.FC<Props> = props => {
                             key={filter.key}
                             updateContent={filter.items?.join("-")}
                             title={(
-                                <h5 className="font-semibold text-sm"> فیلتر بر اساس {filter.label}
+                                <h5 className="font-semibold text-sm whitespace-nowrap"> فیلتر بر اساس {filter.label}
                                     {/* {!!selectedFilter(filter.key)?.length && <span className={activeClass} />}  */}
                                 </h5>
                             )}
@@ -272,9 +272,9 @@ const ProductsFilter: React.FC<Props> = props => {
                             extraInTitle={selectedFilter(filter.key)?.map(i => (
                                 <div
                                     key={i}
-                                    className="border rounded-full font-normal text-xs text-[#ca8bfb] border-[#ca8bfb] inline-flex items-center pr-2 pl-0.5"
+                                    className="border rounded-full font-normal text-xs text-[#ca8bfb] border-[#ca8bfb] inline-flex whitespace-nowrap items-center pr-2 pl-0.5"
                                 >
-                                    {filter.items?.find(f => f.value === i)?.label || i}
+                                    {filter.items?.find((f:any) => f.value === i)?.label || i}
                                     <button
                                         type="button"
                                         onClick={() => { changeFilterHandel(selectedFilter(filter.key).filter(x => x !== i), filter.key) }}

@@ -237,11 +237,11 @@ const HighlightItemSlider: React.FC<Props> = (props) => {
         </div>
       ))}
 
-      <div className='flex gap-2 absolute bottom-5 left-4'>
+      <div className={`flex absolute bottom-5 left-4 max-w-full ${items.length > 10 ? "gap-0.5" : "gap-1"}`}>
         {items.map((item, index) => (
           <button
             key={item.id}
-            className={`h-2.5 rounded-[15px] block transition-all ${index === activeIndex ? "w-6 bg-[#a93aff]" : "w-2.5 bg-[#bbbbbb]"}`}
+            className={`${items.length > 10 ? "h-2" : "h-2.5"} rounded-[15px] block transition-all ${index === activeIndex ? "w-5 bg-[#a93aff]" : items.length > 10 ? "w-2 bg-[#bbbbbb]" :"w-2.5 bg-[#bbbbbb]"}`}
             onClick={() => { setActiveIndex(index) }}
           />
         ))}
