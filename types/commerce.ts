@@ -2,15 +2,49 @@
 
 export type PlatformSlugTypes = "playstation-5" | "playstation-4" | "steam" | "xbox-one" | "xbox-series-xs" | "nintendo-switch-2";
 
+
+export interface ProductItemGenres {
+    keyword?: string;
+    name?: string
+};
+export interface ProductItemPlayerPerspective {
+    keyword?: string;
+    name?: string;
+};
+export interface ProductItemTheme {
+    keyword?: string;
+    name?: string;
+    id?: number;
+};
+
+export interface ProductItemGameplay {
+    keyword?: string;
+    name?: string;
+};
+
+export interface ProductItemDeveloper {
+    fileAltAttribute?: string;
+    filePath?: string;
+    fileTitleAttribute?: string;
+    name?: string;
+    slug?: string;
+};
+export interface ProductItemPublisher {
+    fileAltAttribute?: string;
+    filePath?: string;
+    fileTitleAttribute?: string;
+    name?: string;
+    slug?: string;
+}
+
+
 export interface ProductItem {
     id: number;
     slug?: string;
-    permalink?: string;
-    name?: string;
-    //link?: string;
-    // canonicalUrl?: string;
-    fileAltAttribute?: string;
     filePath?: string;
+    name?: string;
+    releaseDate?: string;
+    fileAltAttribute?: string;
     fileTitleAttribute?: string;
     pegi?: {
         title?: string;
@@ -46,59 +80,7 @@ export interface ProductItem {
             // "id": 0
         }[];
     };
-
-    variants?: ProductVariant[];
     minVariant?:Omit<ProductVariant, "children">;
-    gameplay?: {
-        keyword?: string;
-        name?: string;
-    }[];
-    developer?: {
-        fileAltAttribute?: string;
-        filePath?: string;
-        fileTitleAttribute?: string;
-        name?: string;
-        slug?: string;
-    };
-    publisher?: {
-        fileAltAttribute?: string;
-        filePath?: string;
-        fileTitleAttribute?: string;
-        name?: string;
-        slug?: string;
-    }
-
-    shortDescription?: string;
-
-    releaseDate?: string;
-    brands?: {
-        "name": "EA Sports",
-        "slug": "ea-sports",
-        "isDefault": false,
-        "fileUniqKey": null,
-        "filePath": "https://pn.irangamecenter.com/wp-content/uploads/2025/07/ea-sports.png",
-        "fileTitleAttribute": "ea-sports",
-        "fileAltAttribute": "",
-        "id": 61
-    }[];
-
-    genres?: {
-        keyword?: string;
-        name?: string
-    }[];
-    playerPerspective?: {
-        keyword?: string;
-        name?: string;
-    }[];
-    theme?: {
-        keyword?: string;
-        name?: string;
-        id?: number;
-    }[];
-    tags?: {
-        name?: string;
-        slug?: string;
-    }[];
 }
 
 export interface ProductItemExtented extends ProductItem {

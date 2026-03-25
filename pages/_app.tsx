@@ -7,7 +7,6 @@ import { createTheme, MantineProvider } from "@mantine/core";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Provider } from "react-redux";
-import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -26,19 +25,6 @@ export default function App({ Component, pageProps }: AppProps) {
   //   };
   // }, [router.events]);
 
-
-  useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((reg) => console.log("SW registered:", reg.scope))
-            .catch((err) => console.log("SW failed:", err));
-        });
-      }
-    }
-  }, []);
 
 
   return (

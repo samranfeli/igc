@@ -2,8 +2,8 @@
 
 import { NextPage } from 'next';
 import { ReactNode, useEffect, useMemo, useState } from 'react';
-import { getProductBySlug, getProductGalleries, getProductQuestions, getProductVariants, getVariantById } from '@/actions/commerce';
-import { QuestionItemType, PlatformSlugTypes, ProductDetailData, ProductGalleryItem, ProductVariant, SingleVariant } from '@/types/commerce';
+import { getProductBySlug, getProductGalleries, getProductVariants, getVariantById } from '@/actions/commerce';
+import {PlatformSlugTypes, ProductDetailData, ProductGalleryItem, ProductVariant, SingleVariant } from '@/types/commerce';
 import FAQ from '@/components/shared/FAQ';
 import parse from 'html-react-parser';
 import Image from 'next/image';
@@ -42,7 +42,7 @@ type Props = {
   serverSideGalleryData?: ProductGalleryItem[];
   serverSideVariants?:ProductVariant[];
   serverSideVariant?:SingleVariant;
-  serverSideQuestions?: {items:QuestionItemType[], totalCount: number};
+  //serverSideQuestions?: {items:QuestionItemType[], totalCount: number};
 }
 
 const DetailProduct: NextPage<Props> = props => {
@@ -837,8 +837,8 @@ const DetailProduct: NextPage<Props> = props => {
   const userQuestionAnswer = (
     <UserQuestionAnswer 
       productId={productData.id} 
-      items={props.serverSideQuestions?.items} 
-      total={props.serverSideQuestions?.totalCount} 
+      //items={props.serverSideQuestions?.items} 
+      //total={props.serverSideQuestions?.totalCount} 
     />
   );
 
@@ -1024,12 +1024,12 @@ export async function getServerSideProps(context: any) {
     getVariantById(context.query.variant)
   ]);
 
-  const QuestionsResponse : any = await getProductQuestions({
-    MaxResultCount:5,
-    SkipCount:0,
-    ProductId: response.data?.result?.id,
-    SortType:"Newest"
-  });
+  // const QuestionsResponse : any = await getProductQuestions({
+  //   MaxResultCount:5,
+  //   SkipCount:0,
+  //   ProductId: response.data?.result?.id,
+  //   SortType:"Newest"
+  // });
 
   return {
     props: {
@@ -1040,7 +1040,7 @@ export async function getServerSideProps(context: any) {
       slug: context?.query?.slug || null,
       platform : context?.query?.platform || null,
       variantId : context?.query?.variant || null,
-      serverSideQuestions: QuestionsResponse?.data?.result || null
+      //serverSideQuestions: QuestionsResponse?.data?.result || null
     },
   };
 }
