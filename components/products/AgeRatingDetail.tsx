@@ -24,7 +24,7 @@ const AgeRatingDetail: React.FC<Props> = props => {
 
     const [activeItem, setActiveItem] = useState<string>("");
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const tabItems: TabItem[] = [];
 

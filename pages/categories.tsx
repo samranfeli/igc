@@ -31,7 +31,7 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
 
     const dispatch = useAppDispatch();
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const [activeItemId, setActiveItemId] = useState<number>(strapiData?.[0]?.id || 0);
 

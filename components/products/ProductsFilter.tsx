@@ -21,7 +21,7 @@ type Props = {
 
 const ProductsFilter: React.FC<Props> = props => {
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const router = useRouter();
 

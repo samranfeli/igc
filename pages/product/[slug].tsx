@@ -58,7 +58,7 @@ const DetailProduct: NextPage<Props> = props => {
 
   const [hasSimilar, setHasSimilar] = useState<boolean>(false);
   const dispatch = useAppDispatch();
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const router = useRouter();
 

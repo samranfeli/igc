@@ -21,7 +21,7 @@ const Blogs: NextPage<Props> = props => {
     const [loading, setLoading] = useState(false);
     const [total, setTotal] = useState(props.total);
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const loadMoreWrapper = useRef<HTMLDivElement>(null);
 

@@ -100,7 +100,7 @@ const OrderItemDeatil: NextPage = () => {
     [activeFormKey]
   );
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-5 relative max-w-[1000px] mx-auto px-3.5 lg:px-5">

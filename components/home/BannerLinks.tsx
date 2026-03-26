@@ -17,7 +17,7 @@ type Props = {
 
 const BannerLinks: React.FC<Props> = props => {
     
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     if(isDesktop && props.items.length > 4){
         const carouselItems = props.items.map(item => ({

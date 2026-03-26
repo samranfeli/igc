@@ -16,7 +16,7 @@ type FaqItemType = {
   Answer?: string;
 };
 const Faq: NextPage = ({ items }: { items?: FaqItemType[] }) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   return (
     <>

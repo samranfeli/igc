@@ -14,7 +14,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 const Wallet = () => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const userBalanceLoading = useAppSelector(
     (state) => state.authentication.balanceLoading,

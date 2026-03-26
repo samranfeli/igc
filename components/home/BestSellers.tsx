@@ -23,7 +23,7 @@ const BestSellers: React.FC<Props> = props => {
     
     const dispatch = useAppDispatch();
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const items: {
         products: ProductItem[];

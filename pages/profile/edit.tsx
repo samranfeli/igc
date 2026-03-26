@@ -10,7 +10,7 @@ import { useIsDesktop } from "@/hooks/use-is-desktop";
 
 export default function ProfileEdit() {
   const router = useRouter();
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const isAuthenticated = useAppSelector(
     (state) => state.authentication.isAuthenticated,

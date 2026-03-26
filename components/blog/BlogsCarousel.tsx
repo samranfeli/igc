@@ -33,7 +33,7 @@ const BlogsCarousel: React.FC<Props> = props => {
         date: toPersianDigits(blog.creationTime)
     }));
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     if (!items?.length) {
         return null

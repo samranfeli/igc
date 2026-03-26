@@ -21,7 +21,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Transactions = () => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const [page, setPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);

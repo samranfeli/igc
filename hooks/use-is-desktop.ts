@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
 
 export const useIsDesktop = () => {
-  const [isMobile, setIsMobile] = useState(false);
+
+  type State = "mobile" | "desktop" | "initializing";
+
+  const [state, setState] = useState<State>("initializing");
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth >= 1024);
+    const check = () => setState(window.innerWidth >= 1024 ? "desktop" : "mobile");
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  return isMobile;
+  const isDesktop = state === "desktop";
+  const initializing = state === "initializing";
+
+  return {initializing, isDesktop};
 };

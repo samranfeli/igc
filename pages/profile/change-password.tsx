@@ -17,7 +17,7 @@ import { useIsDesktop } from '@/hooks/use-is-desktop';
 
 export default function ChangePassword() {
   const router = useRouter();
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
   const dispatch = useAppDispatch();
 
   const [submitLoading, setSubmitLoading] = useState<boolean>(false);

@@ -20,6 +20,7 @@ import { GetCookieMode } from "@/helpers";
 import { setReduxNotification } from "@/redux/notificationSlice";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
 import DesktopFooter from "./footer/DesktopFooter";
+import LoadingFull from "../LoadingFull";
 
 type Props = {
     className?: string;
@@ -29,7 +30,7 @@ const Layout: React.FC<PropsWithChildren<Props>> = props => {
 
     const router = useRouter();
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop, initializing} = useIsDesktop();
 
     const dispatch = useAppDispatch();
 
@@ -429,6 +430,9 @@ const Layout: React.FC<PropsWithChildren<Props>> = props => {
         footerElement = <Footer />;
     }
 
+    if(initializing) return(
+        <LoadingFull />
+    )
     return (
         <>
             <Error />

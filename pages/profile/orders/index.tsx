@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 
 const Orders: NextPage = () => {
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   type Status3 = "Canceled"|"Completed" | "InProgress";
 

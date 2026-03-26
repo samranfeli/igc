@@ -16,7 +16,7 @@ type Props = {
 };
 
 const AddFirstQuestion: React.FC<Props> = (props) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
 

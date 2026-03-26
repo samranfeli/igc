@@ -19,7 +19,7 @@ type Props = {
 const UserQuestionItem: React.FC<Props> = (props) => {
   const { question } = props;
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
 

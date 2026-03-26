@@ -17,7 +17,7 @@ import LoadingFull from "@/components/shared/LoadingFull";
 const Wishlist: NextPage = () => {
   const dispatch = useAppDispatch();
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
     const router = useRouter();
     const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);

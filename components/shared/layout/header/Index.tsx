@@ -15,7 +15,7 @@ import MoreWrapper from "./MoreWrapper";
 
 const Header: React.FC = () => {
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const { cartGeneralInfo, loading } = useAppSelector((state) => state.cart);
 

@@ -41,7 +41,7 @@ const Products: NextPage<Props> = props => {
 
     const router = useRouter();
     
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const dispatch = useAppDispatch();
 
