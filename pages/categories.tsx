@@ -6,11 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ArrowTopLeft from "@/components/icons/ArrowTopLeft";
-import { getStrapiCategories } from "@/actions/strapi";
+//import { getStrapiCategories } from "@/actions/strapi";
 import { ServerAddress } from "@/enum/url";
 import { useAppDispatch } from "@/hooks/use-store";
 import { setHeaderParams } from "@/redux/pages";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
+import { categoriesStrapiData } from "@/dummyData/categoriesStrapiData";
 
 type StrapiDataItem = {
     id: number;
@@ -35,12 +36,12 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
     const [activeItemId, setActiveItemId] = useState<number>(strapiData?.[0]?.id || 0);
 
     useEffect(() => {
-        const fetchData = async () => {
-            await getStrapiCategories("locale=fa&populate=*&filters[isTopLevel]=true&pagination[pageSize]=150");
-            await getStrapiCategories("locale=fa&filters[isTopLevel][$eq]=true&[populate][Children][populate]=*");
-        }
+        // const fetchData = async () => {
+        //     await getStrapiCategories("locale=fa&populate=*&filters[isTopLevel]=true&pagination[pageSize]=150");
+        //     await getStrapiCategories("locale=fa&filters[isTopLevel][$eq]=true&[populate][Children][populate]=*");
+        // }
 
-        fetchData()
+        // fetchData()
         
         dispatch(setHeaderParams({
           headerParams:{
@@ -190,32 +191,35 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
 
 export const getStaticProps = async (context: any) => {
 
-    type responseType = {
-        data?: {
-            data?: StrapiDataItem[];
-        }
-    }
+    //laterTOdo: restore commented code
 
-    const [response, responseForChildren] = await Promise.all<responseType>([
-        getStrapiCategories('locale=fa&populate=*&filters[isTopLevel]=true'),
-        getStrapiCategories('locale=fa&filters[isTopLevel][$eq]=true&[populate][Children][populate]=*')
-    ]);
+    // type responseType = {
+    //     data?: {
+    //         data?: StrapiDataItem[];
+    //     }
+    // }
+
+    // const [response, responseForChildren] = await Promise.all<responseType>([
+    //     getStrapiCategories('locale=fa&populate=*&filters[isTopLevel]=true'),
+    //     getStrapiCategories('locale=fa&filters[isTopLevel][$eq]=true&[populate][Children][populate]=*')
+    // ]);
 
 
-    const items = responseForChildren?.data?.data?.map(i => {
-        const relatedItem = response?.data?.data?.find(x => x.id === i.id);
-        return ({
-            ...i,
-            Image: relatedItem?.Image
-        })
-    })
+    // const items = responseForChildren?.data?.data?.map(i => {
+    //     const relatedItem = response?.data?.data?.find(x => x.id === i.id);
+    //     return ({
+    //         ...i,
+    //         Image: relatedItem?.Image
+    //     })
+    // })
 
     return ({
         props: {
             context: {
                 locales: context.locales || null
             },
-            strapiData: items || null
+            //strapiData: items || null
+            strapiData: categoriesStrapiData
         },
         revalidate: 3600
     })

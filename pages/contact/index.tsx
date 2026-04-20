@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiContact, getStrapiPages } from "@/actions/strapi";
+//import { getStrapiContact, getStrapiPages } from "@/actions/strapi";
 import { NextPage } from "next";
 import { useAppDispatch } from "@/hooks/use-store";
 import { useEffect } from "react";
@@ -14,6 +14,7 @@ import Call from "@/components/contact/items/Call";
 import Image from "next/image";
 import Head from "next/head";
 import { StrapiSeoData } from "@/types/commerce";
+import { contactStrapiData, contactStrapiFaqData, contactStrapiSeoData } from "@/dummyData/contactStrapiData";
 
 type FaqData = {
   Title?: string;
@@ -164,32 +165,37 @@ const Contact: NextPage = ({ contacts, faq, strapiSeoData }: { contacts?: Contac
 
 export const getStaticProps = async (context: any) => {
 
-  const [contactUsResponse1,contactUsResponse2, faqResponse, strapiSeoResponse] = await Promise.all<any>([
-    getStrapiContact('locale=fa&populate[ContactUs][populate]=*'),
-    getStrapiContact('locale=fa&populate[ContactUs][populate][Items][populate]=*'),
-    getStrapiContact('locale=fa&populate[Faqs][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=contact&locale=fa&populate[Seo][populate]=*')
-  ]);
+  //laterTOdo: restore commented code
+  
+  // const [contactUsResponse1,contactUsResponse2, faqResponse, strapiSeoResponse] = await Promise.all<any>([
+  //   getStrapiContact('locale=fa&populate[ContactUs][populate]=*'),
+  //   getStrapiContact('locale=fa&populate[ContactUs][populate][Items][populate]=*'),
+  //   getStrapiContact('locale=fa&populate[Faqs][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=contact&locale=fa&populate[Seo][populate]=*')
+  // ]);
 
-  const contacts1:ContactsData = contactUsResponse1?.data?.data?.[0]?.ContactUs;
-  const contacts2:ContactsData = contactUsResponse2?.data?.data?.[0]?.ContactUs;
+  // const contacts1:ContactsData = contactUsResponse1?.data?.data?.[0]?.ContactUs;
+  // const contacts2:ContactsData = contactUsResponse2?.data?.data?.[0]?.ContactUs;
 
-  const contacts = contacts2?.map((item) => {
-    const icon = contacts1.find((x) => x.id === item.id)?.icon
-    return({
-      ...item,
-      icon
-    })
-  }) 
+  // const contacts = contacts2?.map((item) => {
+  //   const icon = contacts1.find((x) => x.id === item.id)?.icon
+  //   return({
+  //     ...item,
+  //     icon
+  //   })
+  // }) 
 
   return ({
     props: {
       context: {
         locales: context.locales || null
       },
-      contacts: contacts || null,
-      faq: faqResponse?.data?.data?.[0]?.Faqs || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      contacts: contactStrapiData,
+      faq: contactStrapiFaqData,
+      strapiSeoData : contactStrapiSeoData
+      // contacts: contacts || null,
+      // faq: faqResponse?.data?.data?.[0]?.Faqs || null,
+      // strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     },
     revalidate: 3600
   })

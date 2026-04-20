@@ -24,7 +24,6 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   reactStrictMode: true,
-  swcMinify: true,
   env: {
     SITE_NAME: "https://irangamecenter.com",
     PROJECT_SERVER_TYPE: "https://",

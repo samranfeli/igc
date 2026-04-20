@@ -1,9 +1,10 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiPages } from "@/actions/strapi";
+//import { getStrapiPages } from "@/actions/strapi";
 import ProfileSideBar from "@/components/authentication/profile/ProfileSideBar";
 import ArrowRight from "@/components/icons/ArrowRight";
 import WalletFaq from "@/components/payment/WalletFaq";
+import { walletFaqData } from "@/dummyData/faqStrapiData";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
 import { NextPage } from "next";
 import Link from "next/link";
@@ -50,16 +51,20 @@ const Faq: NextPage = ({ items }: { items?: FaqItemType[] }) => {
 };
 
 export const getStaticProps = async (context: any) => {
-  const response = await getStrapiPages(
-    "filters[Page][$eq]=walletFaq&locale=fa&populate[Sections][populate]=*",
-  );
+  
+  //laterTOdo: restore commented code
+
+  // const response = await getStrapiPages(
+  //   "filters[Page][$eq]=walletFaq&locale=fa&populate[Sections][populate]=*",
+  // );
 
   return {
     props: {
       context: {
         locales: context.locales || null,
       },
-      items: response?.data?.data?.[0]?.Sections?.[0]?.Items || null,
+      //items: response?.data?.data?.[0]?.Sections?.[0]?.Items || null,
+      items: walletFaqData
     },
     revalidate: 3600,
   };

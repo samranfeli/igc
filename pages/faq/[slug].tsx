@@ -1,7 +1,8 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiPages } from "@/actions/strapi";
+//import { getStrapiPages } from "@/actions/strapi";
 import Accordion from "@/components/shared/Accordion";
+import { faqStrapiData, faqStrapiSeoData } from "@/dummyData/faqStrapiData";
 import { useAppDispatch } from "@/hooks/use-store";
 import { setHeaderParams } from "@/redux/pages";
 import { StrapiSeoData } from "@/types/commerce";
@@ -80,18 +81,22 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
 
   const { query } = context;
 
-  const [response, strapiSeoResponse] = await Promise.all<any>([
-    getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Sections][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Seo][populate]=*')
-  ]);
+  //laterTOdo: restore commented code
+  
+  // const [response, strapiSeoResponse] = await Promise.all<any>([
+  //   getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Sections][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Seo][populate]=*')
+  // ]);
   
   return ({
     props: {
       context: {
         locales: context.locales || null
       },
-      faq: response?.data?.data?.[0]?.Sections?.find( (f:any) => f.Keyword === query.slug) || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      faq: faqStrapiData?.find( (f:any) => f.Keyword === query.slug) || null,
+      strapiSeoData : faqStrapiSeoData
+      // faq: response?.data?.data?.[0]?.Sections?.find( (f:any) => f.Keyword === query.slug) || null,
+      // strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     }
   })
 

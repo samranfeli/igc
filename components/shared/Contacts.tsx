@@ -1,6 +1,7 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
 import { getStrapiPages } from "@/actions/strapi";
+import { dummyContactDataObject } from "@/dummyData/homeStrapiData";
 import { toPersianDigits } from "@/helpers"
 import Image from "next/image"
 import Link from "next/link"
@@ -19,19 +20,21 @@ type Props = {
 
 const Contacts: React.FC<Props> = props => {
 
-    const [data, setData] = useState<dataType | undefined>(props.data || undefined);
+    //laterTOdo: remove dummyContactDataObject
+    const [data, setData] = useState<dataType | undefined>(props.data || dummyContactDataObject || undefined);
 
     useEffect(()=>{        
         const fetchData = async () => {
             const response: any = await getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][populate]=*');
             if(response.data){
                 const aboutSections = response?.data?.data?.[0]?.Sections;
-                setData({
+                const dataObject = {
                     emailAddress: aboutSections?.find((item:any) => item.Keyword === "email")?.Description,
                     supportNumber: aboutSections?.find((item:any) => item.Keyword === "telNumber")?.Description,
                     supportNumberSubtitle: aboutSections?.find((item:any) => item.Keyword === "telNumber")?.Subtitle,
                     supportNUmberUrl: aboutSections?.find((item:any) => item.Keyword === "telNumber")?.Url                    
-                })
+                };
+                setData(dataObject);
             }
         }
 

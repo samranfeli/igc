@@ -6,7 +6,7 @@ import Slider from "@/components/home/Slider";
 import BestSellers from "@/components/home/BestSellers";
 import Intro from "@/components/about/Intro";
 import FAQ from "@/components/shared/FAQ";
-import { getStrapiHighlight, getStrapiPages } from "@/actions/strapi";
+//import { getStrapiHighlight, getStrapiPages } from "@/actions/strapi";
 import { NextPage } from "next";
 import { ServerAddress } from "@/enum/url";
 import Highlights from "@/components/home/highlights";
@@ -20,6 +20,7 @@ import ProductsCarousel from "@/components/products/ProductsCarousel";
 import BannerLinks from "@/components/home/BannerLinks";
 import Head from "next/head";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
+import { dummyHomeAboutData, dummyHomeHighlightData, dummyHomeSectionsData, dummyStrapiSeoData } from "@/dummyData/homeStrapiData";
 
 type HomeAboutDataType = {
   Keyword: "about_intro" | "icons" | "faq" | "telNumber" | "email";
@@ -56,18 +57,18 @@ type HomeSections = {
   IsActive: boolean;
 }
 
-type SliderItemType = {
-  Url?: string;
-  Title?: string;
-  ImageAlternative?: string;
-  ImageTitle?: string;
-  id: number;
-  Description?: string;
-  Subtitle?: string;
-  Image: {
-    url: string;
-  }
-}
+// type SliderItemType = {
+//   Url?: string;
+//   Title?: string;
+//   ImageAlternative?: string;
+//   ImageTitle?: string;
+//   id: number;
+//   Description?: string;
+//   Subtitle?: string;
+//   Image: {
+//     url: string;
+//   }
+// }
 
 type BannerItemType = {
   Url?: string;
@@ -105,7 +106,81 @@ const Home: NextPage<Props> = props => {
 
   const categoris = homeSections?.find(section => section.Keyword === "category");
 
-  const sliderItems = homeSections?.find(section => section.Keyword === "banner")?.Items?.filter(item => item.Image?.url) as SliderItemType[] || [];
+  //laterTOdo: restore commented code and use Strapi data; 
+  //const sliderItems = homeSections?.find(section => section.Keyword === "banner")?.Items?.filter(item => item.Image?.url) as SliderItemType[] || [];
+  const sliderItems :{
+    Url?: string;
+    Title?: string;
+    ImageAlternative?: string;
+    ImageTitle?: string;
+    id: number;
+    Description?: string;
+    Subtitle?: string;
+    Image: {
+        url: string;
+    }
+  }[]
+  = [
+    {
+      id:1,
+      Image:{
+        url:"/dummyStrapiImages/banner-01.jpg",
+      },
+      Description:"شارژ در سریعترین زمان",
+      ImageAlternative:"",
+      ImageTitle:"",
+      Title:"شارژ سی پی کالاف دیوتی موبایل",
+      Subtitle:"بهترین و پرطرفدارترین بازی موبایلی",
+      Url:"/product/call-of-duty-mobile"
+    },
+    {
+      id:2,
+      Image:{
+        url:"/dummyStrapiImages/banner-02.jpg",
+      },
+      Description:"خرید قسطی با اسنپ پی",
+      ImageAlternative:"",
+      ImageTitle:"",
+      Title:"پرداخت قسطی با اسنپ پی",
+      Subtitle:"پرداخت آخر ماه یا ۴ قسطه"
+    },
+    {
+      id:3,
+      Image:{
+        url:"/dummyStrapiImages/banner-03.jpg",
+      },
+      Description:"تجربه فوتبال مدرن",
+      ImageAlternative:"",
+      ImageTitle:"",
+      Title:"فیفا EA Sports FC 26",
+      Subtitle:"ایکس‌باکس، پلی‌استیشن ۴، ۵ و PC",
+      Url:"/product/ea-sports-fc-26"
+    },
+    {
+      id:4,
+      Image:{
+        url:"/dummyStrapiImages/banner-04.jpg",
+      },
+      Description:"رانندگی جهان‌باز در مکزیک",
+      ImageAlternative:"",
+      ImageTitle:"",
+      Title:"بازی Forza Horizon 5",
+      Subtitle:"پلی‌استیشن ۴ و ۵",
+      Url:"/product/forza-horizon-5"
+    },
+    {
+      id:5,
+      Image:{
+        url:"/dummyStrapiImages/banner-05.jpg",
+      },
+      Description:"جنگجویی قدرتمند از گری‌مین‌ها",
+      ImageAlternative:"",
+      ImageTitle:"",
+      Title:"بازی Crimson Desert",
+      Subtitle:"پلی‌استیشن ۴ و ۵",
+      Url:"/product/crimson-desert"
+    },
+  ];
 
   const banner2Items = homeSections?.find(section => section.Keyword === "banner2")?.Items?.filter(item => item.Image?.url) as BannerItemType[] || [];
 
@@ -207,10 +282,13 @@ const Home: NextPage<Props> = props => {
 
 export const getStaticProps = async (context: any) => {
 
-  const [strapiSectionResponse, strapiHighlightsResponse, strapiAboutSectionResponse, blogResponse, playstation5DataResponse,playstation4DataResponse,steamDataResponse,xboxOneDataResponse, xboxSeriesXsDataResponse,nintendoSwitch2DataResponse, backOrderProductsResponse, strapiSeoResponse ] = await Promise.all<any>([
-    getStrapiPages('filters[Page][$eq]=Home&locale=fa&populate[Sections][on][shared.repeter][populate][Items][populate]=*'),
-    getStrapiHighlight('locale=fa&populate[Item][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][populate]=*'),
+  //laterTOdo: restore commented code
+
+  // const [strapiSectionResponse, strapiHighlightsResponse, strapiAboutSectionResponse, blogResponse, playstation5DataResponse,playstation4DataResponse,steamDataResponse,xboxOneDataResponse, xboxSeriesXsDataResponse,nintendoSwitch2DataResponse, backOrderProductsResponse, strapiSeoResponse ] = await Promise.all<any>([
+  const [blogResponse, playstation5DataResponse,playstation4DataResponse,steamDataResponse,xboxOneDataResponse, xboxSeriesXsDataResponse,nintendoSwitch2DataResponse, backOrderProductsResponse] = await Promise.all<any>([
+    // getStrapiPages('filters[Page][$eq]=Home&locale=fa&populate[Sections][on][shared.repeter][populate][Items][populate]=*'),
+    // getStrapiHighlight('locale=fa&populate[Item][populate]=*'),
+    // getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][populate]=*'),
     getBlogsList({MaxResultCount:5,SkipCount:0}),
     getProducts({skipCount:0, maxResultCount:12, variants:["playstation-5"]}),
     getProducts({skipCount:0, maxResultCount:12, variants:["playstation-4"]}),
@@ -219,7 +297,7 @@ export const getStaticProps = async (context: any) => {
     getProducts({skipCount:0, maxResultCount:12, variants:["xbox-series-xs"]}),
     getProducts({skipCount:0, maxResultCount:12, variants:["nintendo-switch-2"]}),
     getProducts({maxResultCount:18,skipCount:0,status : "OnBackOrder"}),
-    getStrapiPages('filters[Page][$eq]=Home&locale=fa&populate[Seo][populate]=*')
+    // getStrapiPages('filters[Page][$eq]=Home&locale=fa&populate[Seo][populate]=*')
   ]);
 
   return ({
@@ -227,9 +305,13 @@ export const getStaticProps = async (context: any) => {
       context: {
         locales: context.locales || null
       },
-      homeSections: strapiSectionResponse?.data?.data?.[0]?.Sections || null,
-      homeHighlights: strapiHighlightsResponse?.data?.data || null,
-      homeAboutData: strapiAboutSectionResponse?.data?.data?.[0]?.Sections || null,
+      homeSections:dummyHomeSectionsData,
+      homeHighlights: dummyHomeHighlightData,
+      homeAboutData: dummyHomeAboutData,
+      strapiSeoData: dummyStrapiSeoData,
+      //homeSections: strapiSectionResponse?.data?.data?.[0]?.Sections || null,
+      //homeHighlights: strapiHighlightsResponse?.data?.data || null,
+      //homeAboutData: strapiAboutSectionResponse?.data?.data?.[0]?.Sections || null,
       recentBlogs:blogResponse?.data?.result?.items || null,
       playstation5Data: playstation5DataResponse?.data?.result || null ,
       playstation4Data: playstation4DataResponse?.data?.result || null ,
@@ -237,8 +319,8 @@ export const getStaticProps = async (context: any) => {
       xboxOneData: xboxOneDataResponse?.data?.result || null ,
       xboxSeriesXsData: xboxSeriesXsDataResponse?.data?.result || null,
       nintendoSwitch2Data: nintendoSwitch2DataResponse?.data?.result || null,
-      backOrderProductsData: backOrderProductsResponse?.data?.result || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      backOrderProductsData: backOrderProductsResponse?.data?.result || null
+      //strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     },
     revalidate: 3600
   })

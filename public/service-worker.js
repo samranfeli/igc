@@ -39,7 +39,7 @@ self.addEventListener("fetch", event => {
 
   if (request.method !== "GET") return;
 
-  const url = new URL(request.url);
+  //const url = new URL(request.url);
 
   // ---------------- HTML → Network First ----------------
   if (request.mode === "navigate") {
@@ -61,30 +61,28 @@ self.addEventListener("fetch", event => {
   }
 
   // ---------------- Static Files → Cache First ----------------
-  if (
-    url.origin === location.origin &&
-    (
-      request.destination === "style" ||
-      request.destination === "script" ||
-      request.destination === "image" ||
-      request.destination === "font"
-    )
-  ) {
-    event.respondWith(
-      caches.match(request).then(cached => {
-        if (cached) return cached;
+  // if (
+  //   url.origin === location.origin &&
+  //   (
+  //     request.destination === "image" ||
+  //     request.destination === "font"
+  //   )
+  // ) {
+  //   event.respondWith(
+  //     caches.match(request).then(cached => {
+  //       if (cached) return cached;
 
-        return fetch(request).then(response => {
-          const clone = response.clone();
-          caches.open(CACHE_STATIC).then(cache => {
-            cache.put(request, clone);
-          });
-          return response;
-        });
-      })
-    );
-    return;
-  }
+  //       return fetch(request).then(response => {
+  //         const clone = response.clone();
+  //         caches.open(CACHE_STATIC).then(cache => {
+  //           cache.put(request, clone);
+  //         });
+  //         return response;
+  //       });
+  //     })
+  //   );
+  //   return;
+  // }
 
   // ---------------- Other Requests → Network First ----------------
   event.respondWith(

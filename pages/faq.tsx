@@ -1,6 +1,7 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiPages } from "@/actions/strapi";
+//import { getStrapiPages } from "@/actions/strapi";
+import { faqStrapiData, faqStrapiSeoData } from "@/dummyData/faqStrapiData";
 import { ServerAddress } from "@/enum/url";
 import { useAppDispatch } from "@/hooks/use-store";
 import { setHeaderParams } from "@/redux/pages";
@@ -83,19 +84,22 @@ const Faq: NextPage = ({ strapiData, strapiSeoData }: { strapiData?: StrapiData,
 
 export const getStaticProps = async (context: any) => {
 
+//laterTOdo: restore commented code
 
-  const [response, strapiSeoResponse] = await Promise.all<any>([
-    getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Sections][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Seo][populate]=*')
-  ]);
+  // const [response, strapiSeoResponse] = await Promise.all<any>([
+  //   getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Sections][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=faq&locale=fa&populate[Seo][populate]=*')
+  // ]);
 
   return ({
     props: {
       context: {
         locales: context.locales || null
       },
-      strapiData: response?.data?.data?.[0]?.Sections || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      strapiData: faqStrapiData,
+      strapiSeoData : faqStrapiSeoData
+      // strapiData: response?.data?.data?.[0]?.Sections || null,
+      // strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     },
     revalidate: 3600
   })

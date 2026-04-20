@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiPages } from "@/actions/strapi";
+// import { getStrapiPages } from "@/actions/strapi";
 import { NextPage } from "next";
 import Accordion from "@/components/shared/Accordion";
 import { useAppDispatch } from "@/hooks/use-store";
@@ -9,6 +9,7 @@ import Markdown from "react-markdown";
 import { StrapiSeoData } from "@/types/commerce";
 import Head from "next/head";
 import { setHeaderParams } from "@/redux/pages";
+import { termsStrapiData, termsStrapiSeo } from "@/dummyData/termsStrapiData";
 
 type StrapiData = {
   Items: {
@@ -69,19 +70,22 @@ const Terms: NextPage = ({ strapiData, strapiSeoData }: { strapiData?: StrapiDat
 
 export const getStaticProps = async (context: any) => {
 
+  //laterTOdo: restore commented code
 
-  const [response, strapiSeoResponse] = await Promise.all<any>([
-    getStrapiPages('filters[Page][$eq]=Terms&locale=fa&populate[Sections][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=Terms&locale=fa&populate[Seo][populate]=*')
-  ]);
+  // const [response, strapiSeoResponse] = await Promise.all<any>([
+  //   getStrapiPages('filters[Page][$eq]=Terms&locale=fa&populate[Sections][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=Terms&locale=fa&populate[Seo][populate]=*')
+  // ]);
 
   return ({
     props: {
       context: {
         locales: context.locales || null
       },
-      strapiData: response?.data?.data?.[0]?.Sections?.[0] || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      strapiData: termsStrapiData,
+      strapiSeoData : termsStrapiSeo
+      // strapiData: response?.data?.data?.[0]?.Sections?.[0] || null,
+      // strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     },
     revalidate: 3600
   })

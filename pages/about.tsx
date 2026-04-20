@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { getStrapiPages } from "@/actions/strapi";
+// import { getStrapiPages } from "@/actions/strapi";
 import { NextPage } from "next";
 import { useAppDispatch } from "@/hooks/use-store";
 import { useEffect } from "react";
@@ -10,6 +10,7 @@ import FAQ from "@/components/shared/FAQ";
 import AboutIcons from "@/components/about/AboutIcons";
 import Head from "next/head";
 import { StrapiSeoData } from "@/types/commerce";
+import { aboutStrapiData, aboutStrapiSeoData } from "@/dummyData/aboutStrapiData";
 
 type StrapiData = {
   Keyword: "about_intro" | "icons" | "faq" | "telNumber" | "email";
@@ -85,23 +86,26 @@ const AboutUs: NextPage = ({ strapiData, strapiSeoData }: { strapiData?: StrapiD
 
 export const getStaticProps = async (context: any) => {
 
-  const [responseForAllSections, responseForIconsSection, strapiSeoResponse] = await Promise.all<any>([
-    getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][on][shared.repeter][populate][Items][populate]=*'),
-    getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Seo][populate]=*')
-  ]);
+  //laterTOdo: restoreCommented code
+  // const [responseForAllSections, responseForIconsSection, strapiSeoResponse] = await Promise.all<any>([
+  //   getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Sections][on][shared.repeter][populate][Items][populate]=*'),
+  //   getStrapiPages('filters[Page][$eq]=aboutUs&locale=fa&populate[Seo][populate]=*')
+  // ]);
 
-  const iconsSection = responseForIconsSection?.data?.data?.[0]?.Sections?.find((item:any) => item.Keyword==="icons");
-  const otherSections = responseForAllSections?.data?.data?.[0]?.Sections?.filter((item:any) => item.Keyword !=="icons");
-  const AllSections = otherSections ? [...otherSections, iconsSection] : null;
+  //const iconsSection = responseForIconsSection?.data?.data?.[0]?.Sections?.find((item:any) => item.Keyword==="icons");
+  //const otherSections = responseForAllSections?.data?.data?.[0]?.Sections?.filter((item:any) => item.Keyword !=="icons");
+  //const AllSections = otherSections ? [...otherSections, iconsSection] : null;
 
   return ({
     props: {
       context: {
         locales: context.locales || null
       },
-      strapiData: AllSections || null,
-      strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
+      strapiData: aboutStrapiData,
+      strapiSeoData : aboutStrapiSeoData
+      // strapiData: AllSections || null,
+      // strapiSeoData : strapiSeoResponse?.data?.data?.[0]?.Seo || null
     },
     revalidate: 3600
   })

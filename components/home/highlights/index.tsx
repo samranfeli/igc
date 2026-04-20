@@ -46,7 +46,7 @@ useEffect(() => {
   if (highlights.length) {
     return (
       <section className="max-lg:hidden-scrollbar lg:styled-scrollbar lg:px-5 lg:pb-2 lg:mb-2 overflow-x-auto overflow-y-clip py-3">
-        <div className="flex items-start gap-3 max-lg:px-3" dir={props.direction}>
+        <div className="flex items-start justify-center gap-3 max-lg:px-3" dir={props.direction}>
           {highlights.map((highlight) => (
             <HighlightItemLink
               open={() => {

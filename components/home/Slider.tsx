@@ -2,7 +2,7 @@ import ClipRadius from "@/public/images/icons/ClipRadius";
 import Image from "next/image";
 import ArrowTopLeft from "../icons/ArrowTopLeft";
 import Link from "next/link";
-import { ServerAddress } from "@/enum/url";
+//import { ServerAddress } from "@/enum/url";
 import Carousel from "../shared/Carousel";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
 
@@ -25,6 +25,10 @@ const Slider: React.FC<Props> = props => {
 
     const isDesktop = useIsDesktop();
     
+    //laterTOdo: restore commented code and use Strapi data; 
+    //const createImageUrl = (u: string) => ServerAddress.Type! + ServerAddress.Strapi + u;
+    const createImageUrl = (u: string) => u;
+    
     if (props.items.length === 1 && !isDesktop) {
 
         const item = props.items[0];
@@ -33,7 +37,7 @@ const Slider: React.FC<Props> = props => {
             <section className="py-3 px-3">
                 <Link className="relative block"  prefetch={false} href={item.Url || "#"}  >
                     <Image
-                        src={ServerAddress.Type! + ServerAddress.Strapi + item.Image!.url!}
+                        src={createImageUrl(item.Image!.url!)}
                         alt={item.ImageAlternative || item.Title || ""}
                         title={item.ImageTitle}
                         width={430}
@@ -79,7 +83,7 @@ const Slider: React.FC<Props> = props => {
             content: (
                 <Link className="relative block"  prefetch={false} href={item.Url || "#"} >
                     <Image
-                        src={ServerAddress.Type! + ServerAddress.Strapi + item.Image!.url!}
+                        src={createImageUrl(item.Image!.url!)}
                         alt={item.ImageAlternative || item.Title || ""}
                         title={item.ImageTitle}
                         width={430}
