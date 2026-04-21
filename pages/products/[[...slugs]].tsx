@@ -230,7 +230,15 @@ const Products: NextPage<Props> = props => {
                 {!!(props.productsData?.pagedResult?.totalCount && products.length < props.productsData.pagedResult.totalCount) && (
                     <div ref={loadMoreWrapper}>
                         {products.length < 100 && !selectedPage ? (
-                            <div className="h-40" />
+                            <div className="text-center py-2">
+                                <button
+                                    type="button"
+                                    className="bg-gradient-violet text-white rounded-full px-5 h-12 w-full sm:max-w-72 text-xs mt-6"
+                                    onClick={addItems}
+                                >
+                                    مشاهده موارد بیشتر
+                                </button>
+                            </div>
                         ) : (
                             <Pagination2
                                 wrapperClassName="max-w-[450px] mx-auto mt-6"
