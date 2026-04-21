@@ -1,5 +1,5 @@
-const CACHE_STATIC = "igc-static-v4";
-const CACHE_DYNAMIC = "igc-dynamic-v4";
+const CACHE_STATIC = "igc-static-v5";
+const CACHE_DYNAMIC = "igc-dynamic-v5";
 const OFFLINE_URL = "/offline.html";
 
 // ================= INSTALL =================

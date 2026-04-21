@@ -129,835 +129,864 @@ export const dummyHomeAboutData = [
 export const dummyHomeHighlightData = [
   {
     "id": 85,
-    "documentId": "ri0mxfk83avn2t2leido2apa",
-    "createdAt": "2025-11-15T12:27:02.665Z",
-    "updatedAt": "2025-11-16T07:41:04.047Z",
-    "publishedAt": "2025-11-16T07:41:04.074Z",
-    "locale": "fa",
     "Keyword": "بازی های استراتژی موبایل",
+    "updatedAt": "2025-11-16T07:41:04.047Z",
     "Item": {
-      "id": 495,
-      "Title": "خرید محصولات بازی های استراتژی موبایل",
-      "IsActive": true,
       "Image": {
-        "id": 249,
-        "documentId": "xym8xm7ykelmqn81i9lpt14d",
-        "name": "strategy.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "strategy_63852520d3",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 6.64,
-        "url": "/uploads/strategy_63852520d3.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-11-15T12:00:10.711Z",
-        "updatedAt": "2025-11-15T12:00:10.711Z",
-        "publishedAt": "2025-11-15T12:00:10.711Z"
+        "url": "/uploads/strategy_63852520d3.png"
       },
-      "Items": [
-        {
-          "id": 1438,
-          "Title": "Clash of Clans",
-          "IsActive": true,
-          "Url": "product/clash-of-clans/",
-          "Subtitle": "قبیله‌ات را قوی‌تر کن و میدان نبرد را فتح کن! ⚔️🔥",
-          "Header": "با قدرت جم‌ها، دهکده‌ات را تسخیرناپذیر کن!"
-        },
-        {
-          "id": 1439,
-          "Title": "Mobile Legends: Bang Bang",
-          "IsActive": true,
-          "Url": "product/mobile-legends-bang-bang/",
-          "Subtitle": "با خرید الماس نهایت لذت رو از بازی ببر ! 💎⚡️",
-          "Header": "قهرمان دلخواهت رو انتخاب و میدان نبرد را تسخیر کن! ⚔️🔥"
-        },
-        {
-          "id": 1440,
-          "Title": "Lords Mobile",
-          "IsActive": true,
-          "Url": "product/lords-mobile/",
-          "Subtitle": "همین حالا جم تهیه کن و سرزمین‌های بیشتری تسخیر کن!",
-          "Header": "ارتش بساز، قهرمانان را فرماندهی کن و قلمروها را فتح کن! ⚔️🏰"
-        },
-        {
-          "id": 1441,
-          "Title": "Clash Royale",
-          "IsActive": true,
-          "Url": "product/clash-royale/",
-          "Subtitle": "همین حالا جم بخر و ارتقاها را سریع‌تر انجام بده! 💎🔥",
-          "Header": "عرشه‌ات را تقویت کن و میدان نبرد را تسخیر کن! ⚔️👑"
-        },
-        {
-          "id": 1442,
-          "Title": "State of Survival",
-          "IsActive": true,
-          "Url": "product/state-of-survival/",
-          "Subtitle": "با خرید بیو‌کپسول، سرعت بقا و پیشرفت را چند برابر کن! 💊🚀",
-          "Header": "در دنیای ویران‌شده، گروهت را نجات بده! ⚔️🧟‍♂️"
-        },
-        {
-          "id": 1443,
-          "Title": "Rise of Kingdoms",
-          "IsActive": true,
-          "Url": "product/rise-of-kingdoms/",
-          "Subtitle": "با خرید جم، ارتقاها و پیشرفت قلمرو را سریع‌تر تجربه کن! 💎🚀",
-          "Header": "قلمرو خود را بساز و تاریخ را شکل بده! 🏰⚔️"
-        },
-        {
-          "id": 1444,
-          "Title": "Boom Beach",
-          "IsActive": true,
-          "Url": "product/boom-beach/",
-          "Subtitle": "با خرید جم، ارتقا و حملاتت را سریع‌تر پیش ببر! 💎🚀",
-          "Header": "حمله کن، جزیره‌ها را آزاد کن و قدرتت را ثابت کن! ⚔️🌊"
+      "Title": "خرید محصولات بازی های استراتژی موبایل"
+    },
+    "dummyItems": [
+      {
+        "id": 1438,
+        "Title": "Clash of Clans",
+        "IsActive": true,
+        "Url": "product/clash-of-clans/",
+        "Subtitle": "قبیله‌ات را قوی‌تر کن و میدان نبرد را فتح کن! ⚔️🔥",
+        "Header": "با قدرت جم‌ها، دهکده‌ات را تسخیرناپذیر کن!",
+        "Image": {
+          "url": "/uploads/clash_222cabfac7.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1439,
+        "Title": "Mobile Legends: Bang Bang",
+        "IsActive": true,
+        "Url": "product/mobile-legends-bang-bang/",
+        "Subtitle": "با خرید الماس نهایت لذت رو از بازی ببر ! 💎⚡️",
+        "Header": "قهرمان دلخواهت رو انتخاب و میدان نبرد را تسخیر کن! ⚔️🔥",
+        "Image": {
+          "url": "/uploads/mlbb_d859f271ea.jpg"
+        }
+      },
+      {
+        "id": 1440,
+        "Title": "Lords Mobile",
+        "IsActive": true,
+        "Url": "product/lords-mobile/",
+        "Subtitle": "همین حالا جم تهیه کن و سرزمین‌های بیشتری تسخیر کن!",
+        "Header": "ارتش بساز، قهرمانان را فرماندهی کن و قلمروها را فتح کن! ⚔️🏰",
+        "Image": {
+          "url": "/uploads/Lords_Mobile_a1f6d7e235.jpg"
+        }
+      },
+      {
+        "id": 1441,
+        "Title": "Clash Royale",
+        "IsActive": true,
+        "Url": "product/clash-royale/",
+        "Subtitle": "همین حالا جم بخر و ارتقاها را سریع‌تر انجام بده! 💎🔥",
+        "Header": "عرشه‌ات را تقویت کن و میدان نبرد را تسخیر کن! ⚔️👑",
+        "Image": {
+          "url": "/uploads/clash_royale_be5fbb09a2.jpg"
+        }
+      },
+      {
+        "id": 1442,
+        "Title": "State of Survival",
+        "IsActive": true,
+        "Url": "product/state-of-survival/",
+        "Subtitle": "با خرید بیو‌کپسول، سرعت بقا و پیشرفت را چند برابر کن! 💊🚀",
+        "Header": "در دنیای ویران‌شده، گروهت را نجات بده! ⚔️🧟‍♂️",
+        "Image": {
+          "url": "/uploads/sos_c9b2598449.jpg"
+        }
+      },
+      {
+        "id": 1443,
+        "Title": "Rise of Kingdoms",
+        "IsActive": true,
+        "Url": "product/rise-of-kingdoms/",
+        "Subtitle": "با خرید جم، ارتقاها و پیشرفت قلمرو را سریع‌تر تجربه کن! 💎🚀",
+        "Header": "قلمرو خود را بساز و تاریخ را شکل بده! 🏰⚔️",
+        "Image": {
+          "url": "/uploads/rok_c5698594fe.jpg"
+        }
+      },
+      {
+        "id": 1444,
+        "Title": "Boom Beach",
+        "IsActive": true,
+        "Url": "product/boom-beach/",
+        "Subtitle": "با خرید جم، ارتقا و حملاتت را سریع‌تر پیش ببر! 💎🚀",
+        "Header": "حمله کن، جزیره‌ها را آزاد کن و قدرتت را ثابت کن! ⚔️🌊",
+        "Image": {
+          "url": "/uploads/Boom_beach_13ab668565.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 86,
-    "documentId": "mk46jgfy7fk6f7cf19ga8yub",
-    "createdAt": "2025-11-15T20:44:24.845Z",
-    "updatedAt": "2025-11-16T07:42:04.613Z",
-    "publishedAt": "2025-11-16T07:42:04.639Z",
-    "locale": "fa",
     "Keyword": "بازی های شوتر موبایل",
+    "updatedAt": "2025-11-16T07:42:04.613Z",
     "Item": {
-      "id": 496,
-      "Title": "محبوب ترین بازی های شوتر موبایل",
-      "IsActive": true,
       "Image": {
-        "id": 265,
-        "documentId": "vccgtd9npm6lww3d525folgf",
-        "name": "shootergames.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "shootergames_dd0b104535",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 5.06,
-        "url": "/uploads/shootergames_dd0b104535.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-11-15T20:47:24.602Z",
-        "updatedAt": "2025-11-15T20:47:24.602Z",
-        "publishedAt": "2025-11-15T20:47:24.602Z"
+        "url": "/uploads/shootergames_dd0b104535.png"
       },
-      "Items": [
-        {
-          "id": 1445,
-          "Title": "Call of Duty: Mobile",
-          "IsActive": true,
-          "Url": "product/call-of-duty-mobile/",
-          "Subtitle": "همین حالا CP بخر و تجهیزات ویژه رو باز کن!",
-          "Header": "با CPها آماده نبرد شو و میدان رو به دست بگیر!"
-        },
-        {
-          "id": 1446,
-          "Title": "Delta Force",
-          "IsActive": true,
-          "Url": "product/delta-force-mobile/",
-          "Subtitle": "با خرید سکه، تجهیزاتت رو سریع‌تر تقویت کن! 🚀🎯",
-          "Header": "وارد عملیات ویژه شو و مأموریت‌ها رو فتح کن! ⚔️🔥"
-        },
-        {
-          "id": 1447,
-          "Title": "PUBG Mobile",
-          "IsActive": true,
-          "Url": "product/pubg-mobile/",
-          "Subtitle": "UC بخر و تجهیزاتت را سریع‌تر ارتقا بده! 💳🎮",
-          "Header": "فرود بیا، زنده بمون و برنده میدان شو! 🪂🔥"
-        },
-        {
-          "id": 1448,
-          "Title": "Free Fire",
-          "IsActive": true,
-          "Url": "product/free-fire/",
-          "Subtitle": "همین حالا الماس بخر و آیتم‌های کمیاب رو به‌دست بیار!",
-          "Header": "به میدان برو و قهرمان نبرد شو! 🔥🪂"
-        },
-        {
-          "id": 1449,
-          "Title": "Blood Strike",
-          "IsActive": true,
-          "Url": "product/blood-strike/",
-          "Subtitle": "همین حالا سکه بخر و خودت رو قدرتمندتر کن!",
-          "Header": "آدرنالین بالا، تیراندازی دقیق، نبردی فراموش‌نشدنی! 💥🎯"
-        },
-        {
-          "id": 1450,
-          "Title": "Arena Breakout",
-          "IsActive": true,
-          "Url": "product/arena-breakout/",
-          "Subtitle": "با خرید باندز، تجهیزات و قدرتت رو سریع‌تر تقویت کن! 💳🎮",
-          "Header": "وارد میدان شو و برنده‌ی هر نبرد باش! ⚡🔥"
+      "Title": "محبوب ترین بازی های شوتر موبایل"
+    },
+    "dummyItems": [
+      {
+        "id": 1445,
+        "Title": "Call of Duty: Mobile",
+        "IsActive": true,
+        "Url": "product/call-of-duty-mobile/",
+        "Subtitle": "همین حالا CP بخر و تجهیزات ویژه رو باز کن!",
+        "Header": "با CPها آماده نبرد شو و میدان رو به دست بگیر!",
+        "Image": {
+          "url": "/uploads/cod_e9f1bcdf3e.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1446,
+        "Title": "Delta Force",
+        "IsActive": true,
+        "Url": "product/delta-force-mobile/",
+        "Subtitle": "با خرید سکه، تجهیزاتت رو سریع‌تر تقویت کن! 🚀🎯",
+        "Header": "وارد عملیات ویژه شو و مأموریت‌ها رو فتح کن! ⚔️🔥",
+        "Image": {
+          "url": "/uploads/deltaforce_e168f9b81e.jpg"
+        }
+      },
+      {
+        "id": 1447,
+        "Title": "PUBG Mobile",
+        "IsActive": true,
+        "Url": "product/pubg-mobile/",
+        "Subtitle": "UC بخر و تجهیزاتت را سریع‌تر ارتقا بده! 💳🎮",
+        "Header": "فرود بیا، زنده بمون و برنده میدان شو! 🪂🔥",
+        "Image": {
+          "url": "/uploads/pubgm_c3e0871c6f.jpg"
+        }
+      },
+      {
+        "id": 1448,
+        "Title": "Free Fire",
+        "IsActive": true,
+        "Url": "product/free-fire/",
+        "Subtitle": "همین حالا الماس بخر و آیتم‌های کمیاب رو به‌دست بیار!",
+        "Header": "به میدان برو و قهرمان نبرد شو! 🔥🪂",
+        "Image": {
+          "url": "/uploads/freefire_4efcac6172.jpg"
+        }
+      },
+      {
+        "id": 1449,
+        "Title": "Blood Strike",
+        "IsActive": true,
+        "Url": "product/blood-strike/",
+        "Subtitle": "همین حالا سکه بخر و خودت رو قدرتمندتر کن!",
+        "Header": "آدرنالین بالا، تیراندازی دقیق، نبردی فراموش‌نشدنی! 💥🎯",
+        "Image": {
+          "url": "/uploads/bloodstrike_669560090a.jpg"
+        }
+      },
+      {
+        "id": 1450,
+        "Title": "Arena Breakout",
+        "IsActive": true,
+        "Url": "product/arena-breakout/",
+        "Subtitle": "با خرید باندز، تجهیزات و قدرتت رو سریع‌تر تقویت کن! 💳🎮",
+        "Header": "وارد میدان شو و برنده‌ی هر نبرد باش! ⚡🔥",
+        "Image": {
+          "url": "/uploads/arenabreakout_f3cc2e33b1.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 88,
-    "documentId": "zipylqb4oycs0myhej3giik6",
-    "createdAt": "2025-11-15T19:20:31.468Z",
-    "updatedAt": "2025-11-16T07:43:14.865Z",
-    "publishedAt": "2025-11-16T07:43:14.893Z",
-    "locale": "fa",
     "Keyword": "بازی های ورزشی کنسول",
+    "updatedAt": "2025-11-16T07:43:14.865Z",
     "Item": {
-      "id": 498,
-      "Title": "محبوب ترین بازی های ورزشی کنسول",
-      "IsActive": true,
       "Image": {
-        "id": 257,
-        "documentId": "ou9dznshu3q3j4r39tj4riah",
-        "name": "sport.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "sport_ff4c5756d9",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 7.75,
-        "url": "/uploads/sport_ff4c5756d9.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-11-15T19:20:20.291Z",
-        "updatedAt": "2025-11-15T19:20:20.291Z",
-        "publishedAt": "2025-11-15T19:20:20.291Z"
+        "url": "/uploads/sport_ff4c5756d9.png"
       },
-      "Items": [
-        {
-          "id": 1452,
-          "Title": "EA Sports FC 26",
-          "IsActive": true,
-          "Url": "product/ea-sports-fc-26/",
-          "Subtitle": "همین حالا خرید کن و فوتبالی هیجان‌انگیز رو شروع کن!",
-          "Header": "وقته فوتباله! زودباش روی بقیه رو کم کن!"
-        },
-        {
-          "id": 1453,
-          "Title": "NBA 2K26",
-          "IsActive": true,
-          "Url": "product/nba-2k26/",
-          "Subtitle": "همین حالا سفارش بده و لذت بسکتبال واقعی رو تجربه کن!",
-          "Header": "بپر تو زمین و بسکتبال واقعی رو زندگی کن! 🏀🔥"
-        },
-        {
-          "id": 1454,
-          "Title": "WWE 2K25",
-          "IsActive": true,
-          "Url": "product/wwe-2k25/",
-          "Subtitle": "همین حالا بخر و قهرمانی رو تو حالت‌های جدید تجربه کن!",
-          "Header": "رینگ رو تسخیر کن و قهرمانِ شب شو! 💥🏆"
-        },
-        {
-          "id": 1455,
-          "Title": "Tony Hawk's Pro Skater 3 + 4",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین الان بخر و اسکیت‌بازی حرفه‌ای رو تجربه کن! 🚀🎮",
-          "Header": "با سرعت برو، تریک بزن و رکوردها رو بشکن! 🛹🔥"
-        },
-        {
-          "id": 1456,
-          "Title": "F1 25",
-          "IsActive": true,
-          "Url": "product/f1-25/",
-          "Subtitle": "الان بخر و هیجان فصل جدید فرمول‌یک رو تجربه کن! 🚀🏁",
-          "Header": "فرمان رو بگیر! به دنیای سرعت و مسابقات F1 خوش اومدی!"
-        },
-        {
-          "id": 1457,
-          "Title": "Gran Turismo 7",
-          "IsActive": true,
-          "Url": "product/gran-turismo-7/",
-          "Subtitle": "وارد دنیای واقعی رانندگی شو! کلکسیون ماشینت رو کامل کن!",
-          "Header": "پشت فرمان بشین و رقابت واقعی رو حس کن! 🏎️🔥"
+      "Title": "محبوب ترین بازی های ورزشی کنسول"
+    },
+    "dummyItems": [
+      {
+        "id": 1452,
+        "Title": "EA Sports FC 26",
+        "IsActive": true,
+        "Url": "product/ea-sports-fc-26/",
+        "Subtitle": "همین حالا خرید کن و فوتبالی هیجان‌انگیز رو شروع کن!",
+        "Header": "وقته فوتباله! زودباش روی بقیه رو کم کن!",
+        "Image": {
+          "url": "/uploads/fc26_dcc7c41bd1.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1453,
+        "Title": "NBA 2K26",
+        "IsActive": true,
+        "Url": "product/nba-2k26/",
+        "Subtitle": "همین حالا سفارش بده و لذت بسکتبال واقعی رو تجربه کن!",
+        "Header": "بپر تو زمین و بسکتبال واقعی رو زندگی کن! 🏀🔥",
+        "Image": {
+          "url": "/uploads/nba2k26_205aaa1410.jpg"
+        }
+      },
+      {
+        "id": 1454,
+        "Title": "WWE 2K25",
+        "IsActive": true,
+        "Url": "product/wwe-2k25/",
+        "Subtitle": "همین حالا بخر و قهرمانی رو تو حالت‌های جدید تجربه کن!",
+        "Header": "رینگ رو تسخیر کن و قهرمانِ شب شو! 💥🏆",
+        "Image": {
+          "url": "/uploads/wwe2k25_7cd7d32080.jpg"
+        }
+      },
+      {
+        "id": 1455,
+        "Title": "Tony Hawk's Pro Skater 3 + 4",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین الان بخر و اسکیت‌بازی حرفه‌ای رو تجربه کن! 🚀🎮",
+        "Header": "با سرعت برو، تریک بزن و رکوردها رو بشکن! 🛹🔥",
+        "Image": {
+          "url": "/uploads/thps34_e88b54c03e.jpg"
+        }
+      },
+      {
+        "id": 1456,
+        "Title": "F1 25",
+        "IsActive": true,
+        "Url": "product/f1-25/",
+        "Subtitle": "الان بخر و هیجان فصل جدید فرمول‌یک رو تجربه کن! 🚀🏁",
+        "Header": "فرمان رو بگیر! به دنیای سرعت و مسابقات F1 خوش اومدی!",
+        "Image": {
+          "url": "/uploads/f125_91eab11b00.jpg"
+        }
+      },
+      {
+        "id": 1457,
+        "Title": "Gran Turismo 7",
+        "IsActive": true,
+        "Url": "product/gran-turismo-7/",
+        "Subtitle": "وارد دنیای واقعی رانندگی شو! کلکسیون ماشینت رو کامل کن!",
+        "Header": "پشت فرمان بشین و رقابت واقعی رو حس کن! 🏎️🔥",
+        "Image": {
+          "url": "/uploads/gt7_27cdb97bf5.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 91,
-    "documentId": "g87tyqaphmwvorb9domkhae3",
-    "createdAt": "2025-11-15T22:44:34.342Z",
-    "updatedAt": "2025-11-16T09:50:14.997Z",
-    "publishedAt": "2025-11-16T09:50:15.020Z",
-    "locale": "fa",
     "Keyword": "بازی های مناسب کودکان",
+    "updatedAt": "2025-11-16T09:50:14.997Z",
     "Item": {
-      "id": 525,
-      "Title": "بازی های کنسول مناسب کودکان",
-      "IsActive": true,
       "Image": {
-        "id": 272,
-        "documentId": "dqldwbnhfbklgdmunzdvbusw",
-        "name": "gamerkids.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "gamerkids_d00edf631d",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 8.25,
-        "url": "/uploads/gamerkids_d00edf631d.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-11-15T22:37:00.779Z",
-        "updatedAt": "2025-11-15T22:37:00.779Z",
-        "publishedAt": "2025-11-15T22:37:00.779Z"
+        "url": "/uploads/gamerkids_d00edf631d.png"
       },
-      "Items": [
-        {
-          "id": 1520,
-          "Title": "Astro Bot",
-          "IsActive": true,
-          "Url": "product/astro-bot/",
-          "Subtitle": "همین حالا با بهترین قیمت بخر و یه بازی فوق‌العاده جذاب رو تجربه کن!",
-          "Header": "کلاهتو به سر کن! با آسترو به کهکشان ماجراجویی سفر کن!"
-        },
-        {
-          "id": 1521,
-          "Title": "Sackboy: A Big Adventure",
-          "IsActive": true,
-          "Url": "product/sackboy-a-big-adventure/",
-          "Subtitle": "همین حالا بخر و این دنیای دست‌ دوز رو با هیجان کشف کن!",
-          "Header": "با سَکبوی کوچولو برو تو دل ماجراجویی! 🎒✨"
-        },
-        {
-          "id": 1522,
-          "Title": "Ratchet & Clank: Rift Apart",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "با خریدن این بازی یک سفر فضاییِ فوق سریع رو تجربه کن!",
-          "Header": "آماده پرش از بُعدها باش! ماجراجویی فضایی شروع شده!"
-        },
-        {
-          "id": 1523,
-          "Title": "Kena: Bridge of Spirits",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "الان بخر و دنیایی پر از احساس رو تجربه کن! 🎮💫",
-          "Header": "به کنا کمک کن! ارواح رو راهنمایی کن و دشمنان رو از بین ببر!"
-        },
-        {
-          "id": 1524,
-          "Title": "Rayman Legends",
-          "IsActive": true,
-          "Url": "product/rayman-legends",
-          "Subtitle": "همین حالا بخر و یک پلتفرمر موزیکال رو تجربه کن!",
-          "Header": "با ریمن بپر، بدو و وارد دنیای افسانه‌ای شو! ✨🎮"
-        },
-        {
-          "id": 1525,
-          "Title": "Tchia",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا بخر و ماجراجویی زیبا در جزایر رو آغاز کن!",
-          "Header": "به جزیره جادویی سفر کن! رازها رو کشف کن و پرواز کن!"
+      "Title": "بازی های کنسول مناسب کودکان"
+    },
+    "dummyItems": [
+      {
+        "id": 1520,
+        "Title": "Astro Bot",
+        "IsActive": true,
+        "Url": "product/astro-bot/",
+        "Subtitle": "همین حالا با بهترین قیمت بخر و یه بازی فوق‌العاده جذاب رو تجربه کن!",
+        "Header": "کلاهتو به سر کن! با آسترو به کهکشان ماجراجویی سفر کن!",
+        "Image": {
+          "url": "/uploads/Astro_Bot_8435bdce89.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1521,
+        "Title": "Sackboy: A Big Adventure",
+        "IsActive": true,
+        "Url": "product/sackboy-a-big-adventure/",
+        "Subtitle": "همین حالا بخر و این دنیای دست‌ دوز رو با هیجان کشف کن!",
+        "Header": "با سَکبوی کوچولو برو تو دل ماجراجویی! 🎒✨",
+        "Image": {
+          "url": "/uploads/sackboy_e3701b6faa.jpg"
+        }
+      },
+      {
+        "id": 1522,
+        "Title": "Ratchet & Clank: Rift Apart",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "با خریدن این بازی یک سفر فضاییِ فوق سریع رو تجربه کن!",
+        "Header": "آماده پرش از بُعدها باش! ماجراجویی فضایی شروع شده!",
+        "Image": {
+          "url": "/uploads/ratchet_a636c72c0c.jpg"
+        }
+      },
+      {
+        "id": 1523,
+        "Title": "Kena: Bridge of Spirits",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "الان بخر و دنیایی پر از احساس رو تجربه کن! 🎮💫",
+        "Header": "به کنا کمک کن! ارواح رو راهنمایی کن و دشمنان رو از بین ببر!",
+        "Image": {
+          "url": "/uploads/kena_8a87139efd.jpg"
+        }
+      },
+      {
+        "id": 1524,
+        "Title": "Rayman Legends",
+        "IsActive": true,
+        "Url": "product/rayman-legends",
+        "Subtitle": "همین حالا بخر و یک پلتفرمر موزیکال رو تجربه کن!",
+        "Header": "با ریمن بپر، بدو و وارد دنیای افسانه‌ای شو! ✨🎮",
+        "Image": {
+          "url": "/uploads/rayman_127bb4e255.jpg"
+        }
+      },
+      {
+        "id": 1525,
+        "Title": "Tchia",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا بخر و ماجراجویی زیبا در جزایر رو آغاز کن!",
+        "Header": "به جزیره جادویی سفر کن! رازها رو کشف کن و پرواز کن!",
+        "Image": {
+          "url": "/uploads/tchia_be7a0d1265.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 95,
-    "documentId": "kyt5fte2k8wm5h5rprcg0srb",
-    "createdAt": "2025-11-16T12:18:52.695Z",
-    "updatedAt": "2025-11-16T12:36:02.761Z",
-    "publishedAt": "2025-11-16T12:36:02.786Z",
-    "locale": "fa",
     "Keyword": "بازی های همکاری برای کنسول",
+    "updatedAt": "2025-11-16T12:36:02.761Z",
     "Item": {
-      "id": 529,
-      "Title": "بازی های دونفره برای کنسول",
-      "IsActive": true,
       "Image": {
-        "id": 280,
-        "documentId": "aehzxg1a7lzfiq2xyzdy5a6u",
-        "name": "co-op-games.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 100,
-        "height": 100,
-        "formats": null,
-        "hash": "co_op_games_ccf672ee2e",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 7.38,
-        "url": "/uploads/co_op_games_ccf672ee2e.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-11-16T11:34:11.086Z",
-        "updatedAt": "2025-11-16T11:34:11.086Z",
-        "publishedAt": "2025-11-16T11:34:11.086Z"
+        "url": "/uploads/co_op_games_ccf672ee2e.png"
       },
-      "Items": [
-        {
-          "id": 1544,
-          "Title": "It Takes Two",
-          "IsActive": true,
-          "Url": "product/it-takes-two",
-          "Subtitle": "الان بخر و یک سفر دونفره فراموش‌نشدنی تجربه کن! 🎮✨",
-          "Header": "با هم همکاری کنید و یک ماجراجویی شگفت‌انگیز بسازید! 💫🤝"
-        },
-        {
-          "id": 1545,
-          "Title": "Split Fiction",
-          "IsActive": true,
-          "Url": "product/split-fiction",
-          "Subtitle": "همین حالا بخر و داستانی متفاوت رو تجربه کن! 🎮📖",
-          "Header": "تیم دو نفره تشکیل بده! دو دنیای متفاوت رو به هم وصل کن!"
-        },
-        {
-          "id": 1546,
-          "Title": "A Way Out",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا بخر و فرار هیجان‌انگیز دونفره رو تجربه کن!",
-          "Header": "با رفیقت همکاری کن! از زندان فرار کنید و آزادی رو به دست بیارید!"
-        },
-        {
-          "id": 1547,
-          "Title": "Baldur’s Gate 3",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا بخر و ماجراجویی نقش‌آفرینی عمیق رو تجربه کن! 🎮🌟",
-          "Header": "به سرزمین‌های فراموش‌شده قدم بگذار! سرنوشت جهان در دستان توست!"
-        },
-        {
-          "id": 1548,
-          "Title": "Diablo IV",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا بخر و نبرد ابدی علیه اهریمن رو آغاز کن!",
-          "Header": "وارد جهنم شو! لیلیث برگشته، دنیا به یک قهرمان نیاز داره!"
+      "Title": "بازی های دونفره برای کنسول"
+    },
+    "dummyItems": [
+      {
+        "id": 1544,
+        "Title": "It Takes Two",
+        "IsActive": true,
+        "Url": "product/it-takes-two",
+        "Subtitle": "الان بخر و یک سفر دونفره فراموش‌نشدنی تجربه کن! 🎮✨",
+        "Header": "با هم همکاری کنید و یک ماجراجویی شگفت‌انگیز بسازید! 💫🤝",
+        "Image": {
+          "url": "/uploads/it_takes_two_39fe45b5eb.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1545,
+        "Title": "Split Fiction",
+        "IsActive": true,
+        "Url": "product/split-fiction",
+        "Subtitle": "همین حالا بخر و داستانی متفاوت رو تجربه کن! 🎮📖",
+        "Header": "تیم دو نفره تشکیل بده! دو دنیای متفاوت رو به هم وصل کن!",
+        "Image": {
+          "url": "/uploads/split_fiction_496994434a.jpg"
+        }
+      },
+      {
+        "id": 1546,
+        "Title": "A Way Out",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا بخر و فرار هیجان‌انگیز دونفره رو تجربه کن!",
+        "Header": "با رفیقت همکاری کن! از زندان فرار کنید و آزادی رو به دست بیارید!",
+        "Image": {
+          "url": "/uploads/a_way_out_4f410dac62.jpg"
+        }
+      },
+      {
+        "id": 1547,
+        "Title": "Baldur’s Gate 3",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا بخر و ماجراجویی نقش‌آفرینی عمیق رو تجربه کن! 🎮🌟",
+        "Header": "به سرزمین‌های فراموش‌شده قدم بگذار! سرنوشت جهان در دستان توست!",
+        "Image": {
+          "url": "/uploads/bg3_ab3974c713.jpg"
+        }
+      },
+      {
+        "id": 1548,
+        "Title": "Diablo IV",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا بخر و نبرد ابدی علیه اهریمن رو آغاز کن!",
+        "Header": "وارد جهنم شو! لیلیث برگشته، دنیا به یک قهرمان نیاز داره!",
+        "Image": {
+          "url": "/uploads/diablo_iv_fa0cb5bbda.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 97,
-    "documentId": "od2y4wcycxqisfevk07d2k9i",
-    "createdAt": "2025-05-17T14:32:13.507Z",
-    "updatedAt": "2025-12-18T14:05:56.402Z",
-    "publishedAt": "2025-12-18T14:05:56.447Z",
-    "locale": "fa",
     "Keyword": "بازی های آینده",
+    "updatedAt": "2025-12-18T14:05:56.402Z",
     "Item": {
-      "id": 555,
-      "Title": "بازی های آینده",
-      "IsActive": true,
       "Image": {
-        "id": 1,
-        "documentId": "rcrac80kngo0h8faik65r3xa",
-        "name": "p4.webp",
-        "alternativeText": null,
-        "caption": null,
-        "width": 186,
-        "height": 186,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_p4.webp",
-            "hash": "thumbnail_p4_b9d4af461f",
-            "ext": ".webp",
-            "mime": "image/webp",
-            "path": null,
-            "width": 156,
-            "height": 156,
-            "size": 3.55,
-            "sizeInBytes": 3548,
-            "url": "/uploads/thumbnail_p4_b9d4af461f.webp"
-          }
-        },
-        "hash": "p4_b9d4af461f",
-        "ext": ".webp",
-        "mime": "image/webp",
-        "size": 3.67,
-        "url": "/uploads/p4_b9d4af461f.webp",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-02-14T17:20:32.937Z",
-        "updatedAt": "2025-02-14T17:20:49.758Z",
-        "publishedAt": "2025-02-14T17:20:32.938Z"
+        "url": "/uploads/p4_b9d4af461f.webp"
       },
-      "Items": [
-        {
-          "id": 1609,
-          "Title": "پیش خرید GTA VI",
-          "IsActive": true,
-          "Url": "product/grand-theft-auto-vi/",
-          "Subtitle": "اکانت قانونی برای PS5",
-          "Header": "Grand Theft Auto VI"
-        },
-        {
-          "id": 1610,
-          "Title": " پیش خرید Resident Evil Requiem",
-          "IsActive": true,
-          "Url": "product/resident-evil-requiem/",
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "پیش خرید اکانت  Resident Evil Requiem"
-        },
-        {
-          "id": 1611,
-          "Title": "Saros",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی برای PS5",
-          "Header": "پیش خرید بازی Saros"
-        },
-        {
-          "id": 1612,
-          "Title": "007 First Light",
-          "IsActive": true,
-          "Url": "product/007-first-light",
-          "Subtitle": "اکانت فانونی برای PS5",
-          "Header": "پیش خرید بازی 007 First Light"
-        },
-        {
-          "id": 1613,
-          "Title": "Marathon",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی برای PS5",
-          "Header": "پیش خرید بازی Marathon"
-        },
-        {
-          "id": 1614,
-          "Title": "Onimusha: Way of the Sword",
-          "IsActive": true,
-          "Url": "product/onimusha-way-of-the-sword",
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "پیش خرید بازی Onimusha: Way of the Sword"
-        },
-        {
-          "id": 1615,
-          "Title": "Deus Ex Remastered",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "پیش خرید بازی Deus Ex Remastered"
-        },
-        {
-          "id": 1616,
-          "Title": "Nioh 3",
-          "IsActive": true,
-          "Url": "product/nioh-3",
-          "Subtitle": "اکانت قانونی برای PS5",
-          "Header": "پیش خرید بازی Nioh 3"
-        },
-        {
-          "id": 1617,
-          "Title": "High On Life 2",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "پیش خرید بازی High On Life 2"
-        },
-        {
-          "id": 1618,
-          "Title": "COPA CITY",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی COPA CITY",
-          "Header": "پیش خرید بازی COPA CITY"
-        },
-        {
-          "id": 1619,
-          "Title": "Monster Hunter Stories 3: Twisted",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "اکانت قانونی برای PS5",
-          "Header": "پیش خرید Monster Hunter Stories 3: Twisted"
-        },
-        {
-          "id": 1620,
-          "Title": "Hate This Place",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید نسخه PS5 – شروع یک ماجراجویی ترسناک",
-          "Header": "ترس را در تاریکی واقعی تجربه کن 🎮"
-        },
-        {
-          "id": 1621,
-          "Title": "CODE VEIN II",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید کن و زودتر وارد نبرد خون‌آلود شو",
-          "Header": "بازگشت به دنیای خون، شمشیر و تاریکی 🔥"
-        },
-        {
-          "id": 1622,
-          "Title": "Tides of Tomorrow",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید نسخه PS5",
-          "Header": "ماجراجویی در امواج آینده را آغاز کن 🌊"
-        },
-        {
-          "id": 1623,
-          "Title": "Crimson Desert",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید نسخه PS5",
-          "Header": "دنیایی خشن، پر از نبرد و شجاعت در انتظار تو ⚔️"
-        },
-        {
-          "id": 1624,
-          "Title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "بازی را پیش خرید و دوباره تاریخ را فتح کن",
-          "Header": "بازگشت اسطوره نبردهای سه پادشاهی 💥"
-        },
-        {
-          "id": 1625,
-          "Title": "Intergalactic: The Heretic Prophet",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "شاهکاری دیگر از سازندگان Uncharted و The Last of Us",
-          "Header": "نبردی میان ایمان، ستارگان و سرنوشت 🌌"
-        },
-        {
-          "id": 1626,
-          "Title": "Pragmata",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید نسخه PS5",
-          "Header": "سفر به آینده‌ای ناشناخته و پر از رمز و راز 🚀"
-        },
-        {
-          "id": 1627,
-          "Title": "Directive 8020",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "هم‌اکنون پیش‌خرید کن و زودتر وارد ماجراجویی شو!",
-          "Header": "مأموریتت را در اعماق فضا آغاز کن!"
-        },
-        {
-          "id": 1628,
-          "Title": "Halo: Campaign Evolved",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا پیش‌خرید کن و اولین تجربه‌کننده‌ی این حماسه باش!",
-          "Header": "افسانه مستر چیف، این بار در نسل و PS5!"
-        },
-        {
-          "id": 1629,
-          "Title": "Aphelion",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید کن؛ و برای ماجراجویی ترسناک در فضا آماده شو!",
-          "Header": "بقا در سیاره یخ‌زده، دورترین نقطه منظومه شمسی!"
-        },
-        {
-          "id": 1630,
-          "Title": "ArcheAge Chronicles",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "همین حالا پیش‌خرید کن؛ داستان حماسه‌ی خود را بنویس!",
-          "Header": "بازگشت به دنیای حماسی آرک‌ ایج؛ نبرد برای سرزمین‌ها!"
-        },
-        {
-          "id": 1631,
-          "Title": "The Wolf Among Us 2",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "برای داستانی نفس گیر خودتو آماده کن!",
-          "Header": "بازگشت گرگ در دنیایی تاریک و رازألود!"
-        },
-        {
-          "id": 1632,
-          "Title": "Ballad of Antara",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید کن و چالش مبارزات سخت RPG را بپذیر!",
-          "Header": "حماسه‌ای شاعرانه در جهانی پر از شگفتی و خطر!"
-        },
-        {
-          "id": 1633,
-          "Title": "Mio: Memories in Orbit",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید نسخه پلی استیشن؛ یک ماجراجویی پلتفرمر در ایستگاه فضایی...",
-          "Header": "بیداری میان ستارگان، با خاطراتی گمشده!"
-        },
-        {
-          "id": 1634,
-          "Title": "Terminator: Survivors",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "بقای پساآخرالزمانی و جنگ علیه ترمیناتورها!",
-          "Header": "روز داوری فرا رسیده؛ در برابر اسکای‌نت زنده بمان!"
-        },
-        {
-          "id": 1635,
-          "Title": "Edge of Memories",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "پیش‌خرید کن و در این ماجراجوییِ معمایی، اسرار را برملا کن!",
-          "Header": "خاطرات گذشته تو را فرا می‌خوانند؛ برای کشف حقیقت!"
-        },
-        {
-          "id": 1636,
-          "Title": "FATAL FRAME II: Crimson Butterfly REMAKE",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "در روستای نفرین‌شده برای بقا مبارزه کن!",
-          "Header": "بازگشت ترسناک‌ترین کابوس با جزئیاتی خیره‌کننده!"
-        },
-        {
-          "id": 1637,
-          "Title": "INZOI",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "زندگی را در دنیایی بی‌مرز و واقع‌گرایانه تجربه کن!",
-          "Header": "زندگی رویایی خود را با گرافیک فوق‌العاده واقع‌گرایانه بساز!"
-        },
-        {
-          "id": 1638,
-          "Title": "John Carpenter's Toxic Commando",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "برای نجات دنیا، تیم خود را برای نبرد آماده کن!",
-          "Header": "آماده‌ی انفجار، زامبی‌کشی و آدرنالین خالص شو!"
-        },
-        {
-          "id": 1639,
-          "Title": "Marvel 1943: Rise of Hydra",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "کاپیتان آمریکا و بلک پنتر در نبردی حماسی!",
-          "Header": "نبرد قهرمانان مارول در قلب جنگ جهانی!"
-        },
-        {
-          "id": 1640,
-          "Title": "Super Meat Boy 3D",
-          "IsActive": true,
-          "Url": null,
-          "Subtitle": "بازگشت قهرمان گوشتی در بُعدی تازه و دیوانه‌وار!",
-          "Header": "سریع، سخت، خشن! پلتفرمر سه‌بعدی با چالش‌های دیوانه‌وار!"
+      "Title": "بازی های آینده"
+    },
+    "dummyItems": [
+      {
+        "id": 1609,
+        "Title": "پیش خرید GTA VI",
+        "IsActive": true,
+        "Url": "product/grand-theft-auto-vi/",
+        "Subtitle": "اکانت قانونی برای PS5",
+        "Header": "Grand Theft Auto VI",
+        "Image": {
+          "url": "/uploads/gtavihighlight_b424554c54.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1610,
+        "Title": " پیش خرید Resident Evil Requiem",
+        "IsActive": true,
+        "Url": "product/resident-evil-requiem/",
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "پیش خرید اکانت  Resident Evil Requiem",
+        "Image": {
+          "url": "/uploads/Resident_Evil_Requiem_Iran_Game_Center_303feec32f.jpg"
+        }
+      },
+      {
+        "id": 1611,
+        "Title": "Saros",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی برای PS5",
+        "Header": "پیش خرید بازی Saros",
+        "Image": {
+          "url": "/uploads/Saros_a7d3f6eeaf.jpg"
+        }
+      },
+      {
+        "id": 1612,
+        "Title": "007 First Light",
+        "IsActive": true,
+        "Url": "product/007-first-light",
+        "Subtitle": "اکانت فانونی برای PS5",
+        "Header": "پیش خرید بازی 007 First Light",
+        "Image": {
+          "url": "/uploads/007_4c031ad0dd.jpg"
+        }
+      },
+      {
+        "id": 1613,
+        "Title": "Marathon",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی برای PS5",
+        "Header": "پیش خرید بازی Marathon",
+        "Image": {
+          "url": "/uploads/marathon_135511b00a.jpg"
+        }
+      },
+      {
+        "id": 1614,
+        "Title": "Onimusha: Way of the Sword",
+        "IsActive": true,
+        "Url": "product/onimusha-way-of-the-sword",
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "پیش خرید بازی Onimusha: Way of the Sword",
+        "Image": {
+          "url": "/uploads/Onimusha_6d9508cdb1.jpg"
+        }
+      },
+      {
+        "id": 1615,
+        "Title": "Deus Ex Remastered",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "پیش خرید بازی Deus Ex Remastered",
+        "Image": {
+          "url": "/uploads/deusremastered_73d55f8eb5.jpg"
+        }
+      },
+      {
+        "id": 1616,
+        "Title": "Nioh 3",
+        "IsActive": true,
+        "Url": "product/nioh-3",
+        "Subtitle": "اکانت قانونی برای PS5",
+        "Header": "پیش خرید بازی Nioh 3",
+        "Image": {
+          "url": "/uploads/nioh3_d2541cf5a8.jpg"
+        }
+      },
+      {
+        "id": 1617,
+        "Title": "High On Life 2",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "پیش خرید بازی High On Life 2",
+        "Image": {
+          "url": "/uploads/high_on_life_2_27fd6e7ba5.jpg"
+        }
+      },
+      {
+        "id": 1618,
+        "Title": "COPA CITY",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی COPA CITY",
+        "Header": "پیش خرید بازی COPA CITY",
+        "Image": {
+          "url": "/uploads/COPA_CITY_34b8116b27.jpg"
+        }
+      },
+      {
+        "id": 1619,
+        "Title": "Monster Hunter Stories 3: Twisted",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "اکانت قانونی برای PS5",
+        "Header": "پیش خرید Monster Hunter Stories 3: Twisted",
+        "Image": {
+          "url": "/uploads/MHS_3_9c423a8d57.jpg"
+        }
+      },
+      {
+        "id": 1620,
+        "Title": "Hate This Place",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید نسخه PS5 – شروع یک ماجراجویی ترسناک",
+        "Header": "ترس را در تاریکی واقعی تجربه کن 🎮",
+        "Image": {
+          "url": "/uploads/IHTP_660f874fab.jpg"
+        }
+      },
+      {
+        "id": 1621,
+        "Title": "CODE VEIN II",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید کن و زودتر وارد نبرد خون‌آلود شو",
+        "Header": "بازگشت به دنیای خون، شمشیر و تاریکی 🔥",
+        "Image": {
+          "url": "/uploads/Code_Vein2_9ae573542e.jpg"
+        }
+      },
+      {
+        "id": 1622,
+        "Title": "Tides of Tomorrow",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید نسخه PS5",
+        "Header": "ماجراجویی در امواج آینده را آغاز کن 🌊",
+        "Image": {
+          "url": "/uploads/TOT_Irangamecenter_3ab955e18f.jpg"
+        }
+      },
+      {
+        "id": 1623,
+        "Title": "Crimson Desert",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید نسخه PS5",
+        "Header": "دنیایی خشن، پر از نبرد و شجاعت در انتظار تو ⚔️",
+        "Image": {
+          "url": "/uploads/Crimson_Desert_532be48e01.jpg"
+        }
+      },
+      {
+        "id": 1624,
+        "Title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "بازی را پیش خرید و دوباره تاریخ را فتح کن",
+        "Header": "بازگشت اسطوره نبردهای سه پادشاهی 💥",
+        "Image": {
+          "url": "/uploads/dynastywarriors3_f0e83450e4.jpg"
+        }
+      },
+      {
+        "id": 1625,
+        "Title": "Intergalactic: The Heretic Prophet",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "شاهکاری دیگر از سازندگان Uncharted و The Last of Us",
+        "Header": "نبردی میان ایمان، ستارگان و سرنوشت 🌌",
+        "Image": {
+          "url": "/uploads/Intergalactic_c1f778ca59.jpg"
+        }
+      },
+      {
+        "id": 1626,
+        "Title": "Pragmata",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید نسخه PS5",
+        "Header": "سفر به آینده‌ای ناشناخته و پر از رمز و راز 🚀",
+        "Image": {
+          "url": "/uploads/Pragmata_2f0e6518ff.jpg"
+        }
+      },
+      {
+        "id": 1627,
+        "Title": "Directive 8020",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "هم‌اکنون پیش‌خرید کن و زودتر وارد ماجراجویی شو!",
+        "Header": "مأموریتت را در اعماق فضا آغاز کن!",
+        "Image": {
+          "url": "/uploads/Directive8020_fef0ee89fd.jpg"
+        }
+      },
+      {
+        "id": 1628,
+        "Title": "Halo: Campaign Evolved",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا پیش‌خرید کن و اولین تجربه‌کننده‌ی این حماسه باش!",
+        "Header": "افسانه مستر چیف، این بار در نسل و PS5!",
+        "Image": {
+          "url": "/uploads/Halo_CE_922759d59a.jpg"
+        }
+      },
+      {
+        "id": 1629,
+        "Title": "Aphelion",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید کن؛ و برای ماجراجویی ترسناک در فضا آماده شو!",
+        "Header": "بقا در سیاره یخ‌زده، دورترین نقطه منظومه شمسی!",
+        "Image": {
+          "url": "/uploads/Aphelion_ae9a8a549a.jpg"
+        }
+      },
+      {
+        "id": 1630,
+        "Title": "ArcheAge Chronicles",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "همین حالا پیش‌خرید کن؛ داستان حماسه‌ی خود را بنویس!",
+        "Header": "بازگشت به دنیای حماسی آرک‌ ایج؛ نبرد برای سرزمین‌ها!",
+        "Image": {
+          "url": "/uploads/Archeage_3c60e81fa0.jpg"
+        }
+      },
+      {
+        "id": 1631,
+        "Title": "The Wolf Among Us 2",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "برای داستانی نفس گیر خودتو آماده کن!",
+        "Header": "بازگشت گرگ در دنیایی تاریک و رازألود!",
+        "Image": {
+          "url": "/uploads/TWAU_47433f3e39.jpg"
+        }
+      },
+      {
+        "id": 1632,
+        "Title": "Ballad of Antara",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید کن و چالش مبارزات سخت RPG را بپذیر!",
+        "Header": "حماسه‌ای شاعرانه در جهانی پر از شگفتی و خطر!",
+        "Image": {
+          "url": "/uploads/BOA_cdce88e884.jpg"
+        }
+      },
+      {
+        "id": 1633,
+        "Title": "Mio: Memories in Orbit",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید نسخه پلی استیشن؛ یک ماجراجویی پلتفرمر در ایستگاه فضایی...",
+        "Header": "بیداری میان ستارگان، با خاطراتی گمشده!",
+        "Image": {
+          "url": "/uploads/MIO_68b446f529.jpg"
+        }
+      },
+      {
+        "id": 1634,
+        "Title": "Terminator: Survivors",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "بقای پساآخرالزمانی و جنگ علیه ترمیناتورها!",
+        "Header": "روز داوری فرا رسیده؛ در برابر اسکای‌نت زنده بمان!",
+        "Image": {
+          "url": "/uploads/Terminator_survivors_3cecf9f96e.jpg"
+        }
+      },
+      {
+        "id": 1635,
+        "Title": "Edge of Memories",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "پیش‌خرید کن و در این ماجراجوییِ معمایی، اسرار را برملا کن!",
+        "Header": "خاطرات گذشته تو را فرا می‌خوانند؛ برای کشف حقیقت!",
+        "Image": {
+          "url": "/uploads/Edge_of_Memories_8392906514.jpg"
+        }
+      },
+      {
+        "id": 1636,
+        "Title": "FATAL FRAME II: Crimson Butterfly REMAKE",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "در روستای نفرین‌شده برای بقا مبارزه کن!",
+        "Header": "بازگشت ترسناک‌ترین کابوس با جزئیاتی خیره‌کننده!",
+        "Image": {
+          "url": "/uploads/FFIICR_f6121a7d54.jpg"
+        }
+      },
+      {
+        "id": 1637,
+        "Title": "INZOI",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "زندگی را در دنیایی بی‌مرز و واقع‌گرایانه تجربه کن!",
+        "Header": "زندگی رویایی خود را با گرافیک فوق‌العاده واقع‌گرایانه بساز!",
+        "Image": {
+          "url": "/uploads/INZOI_db9b979260.jpg"
+        }
+      },
+      {
+        "id": 1638,
+        "Title": "John Carpenter's Toxic Commando",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "برای نجات دنیا، تیم خود را برای نبرد آماده کن!",
+        "Header": "آماده‌ی انفجار، زامبی‌کشی و آدرنالین خالص شو!",
+        "Image": {
+          "url": "/uploads/John_Carpenter_40f539376b.jpg"
+        }
+      },
+      {
+        "id": 1639,
+        "Title": "Marvel 1943: Rise of Hydra",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "کاپیتان آمریکا و بلک پنتر در نبردی حماسی!",
+        "Header": "نبرد قهرمانان مارول در قلب جنگ جهانی!",
+        "Image": {
+          "url": "/uploads/1943_8702ab5333.jpg"
+        }
+      },
+      {
+        "id": 1640,
+        "Title": "Super Meat Boy 3D",
+        "IsActive": true,
+        "Url": null,
+        "Subtitle": "بازگشت قهرمان گوشتی در بُعدی تازه و دیوانه‌وار!",
+        "Header": "سریع، سخت، خشن! پلتفرمر سه‌بعدی با چالش‌های دیوانه‌وار!",
+        "Image": {
+          "url": "/uploads/SMB_3_D_408d9399a5.jpg"
+        }
+      }
+    ]
   },
   {
     "id": 98,
-    "documentId": "mqd5k9waad8p1vx449tli03i",
-    "createdAt": "2025-05-14T09:27:32.992Z",
-    "updatedAt": "2025-12-18T14:07:36.613Z",
-    "publishedAt": "2025-12-18T14:07:36.647Z",
-    "locale": "fa",
     "Keyword": "PS",
+    "updatedAt": "2025-12-18T14:07:36.613Z",
     "Item": {
-      "id": 556,
-      "Title": "فروش بازی های پلی استیشن",
-      "IsActive": true,
       "Image": {
-        "id": 25,
-        "documentId": "s9m9bk191o97u6qj0u2aqodc",
-        "name": "ps-icon.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 82,
-        "height": 82,
-        "formats": null,
-        "hash": "ps_icon_8294581e44",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 0.52,
-        "url": "/uploads/ps_icon_8294581e44.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-02-23T13:08:22.860Z",
-        "updatedAt": "2025-02-23T13:08:22.860Z",
-        "publishedAt": "2025-02-23T13:08:22.860Z"
+        "url": "/uploads/ps_icon_8294581e44.png"
       },
-      "Items": [
-        {
-          "id": 1641,
-          "Title": "Call of Duty: Black Ops 7",
-          "IsActive": true,
-          "Url": "product/call-of-duty-black-ops-7/",
-          "Subtitle": "برای PS4 و PS5",
-          "Header": "خرید اکانت قانونی Call of Duty: Black Ops 7"
-        },
-        {
-          "id": 1642,
-          "Title": "خرید اکانت قانونی FC 26",
-          "IsActive": true,
-          "Url": "product/ea-sports-fc-26/",
-          "Subtitle": "برای PS4 و PS5",
-          "Header": null
-        },
-        {
-          "id": 1643,
-          "Title": "اکانت قانونی Assassin's Creed Shadows",
-          "IsActive": true,
-          "Url": "product/assassins-creed-shadows/",
-          "Subtitle": " برای PS5",
-          "Header": null
-        },
-        {
-          "id": 1644,
-          "Title": "Grand Theft Auto VI",
-          "IsActive": true,
-          "Url": "product/grand-theft-auto-vi/",
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "پیش فروش"
-        },
-        {
-          "id": 1645,
-          "Title": "Mafia: The Old Country",
-          "IsActive": true,
-          "Url": "product/mafia-the-old-country/",
-          "Subtitle": "اکانت قانونی PS5",
-          "Header": "خرید بازی Mafia: The Old Country"
-        },
-        {
-          "id": 1646,
-          "Title": "God of War Ragnarök",
-          "IsActive": true,
-          "Url": "product/god-of-war-ragnarok/",
-          "Subtitle": "خشم کریتوس را تجربه کن؛ نبرد برای بقا آغاز شده!",
-          "Header": "نبردی افسانه‌ای میان خدایان و انسان‌ها! ⚔️🔥"
-        },
-        {
-          "id": 1647,
-          "Title": "Ghost of Yōtei",
-          "IsActive": true,
-          "Url": "product/ghost-of-yotei/",
-          "Subtitle": "اکنون خرید کنید و افسانه خود را آغاز نمایید.",
-          "Header": "سایه‌های جنگ بر کوه یوتِی سنگینی می‌کند! ⚔️🌫️"
-        },
-        {
-          "id": 1648,
-          "Title": "Code Violet",
-          "IsActive": true,
-          "Url": "product/code-violet",
-          "Subtitle": "همین حالا بخر و داستان مرموز این بازی رو تجربه کن!",
-          "Header": "به دنیای مرموز و سایه‌وار کُد وارد شو! 🔮💻"
+      "Title": "فروش بازی های پلی استیشن"
+    },
+    "dummyItems": [
+      {
+        "id": 1641,
+        "Title": "Call of Duty: Black Ops 7",
+        "IsActive": true,
+        "Url": "product/call-of-duty-black-ops-7/",
+        "Subtitle": "برای PS4 و PS5",
+        "Header": "خرید اکانت قانونی Call of Duty: Black Ops 7",
+        "Image": {
+          "url": "/uploads/CODBO_7_Iran_Game_Center_c921c25d7a.jpg"
         }
-      ]
-    }
+      },
+      {
+        "id": 1642,
+        "Title": "خرید اکانت قانونی FC 26",
+        "IsActive": true,
+        "Url": "product/ea-sports-fc-26/",
+        "Subtitle": "برای PS4 و PS5",
+        "Header": null,
+        "Image": {
+          "url": "/uploads/fc26highlight_28572b7f88.jpg"
+        }
+      },
+      {
+        "id": 1643,
+        "Title": "اکانت قانونی Assassin's Creed Shadows",
+        "IsActive": true,
+        "Url": "product/assassins-creed-shadows/",
+        "Subtitle": " برای PS5",
+        "Header": null,
+        "Image": {
+          "url": "/uploads/highlights_02_553e5772c0.jpg"
+        }
+      },
+      {
+        "id": 1644,
+        "Title": "Grand Theft Auto VI",
+        "IsActive": true,
+        "Url": "product/grand-theft-auto-vi/",
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "پیش فروش",
+        "Image": {
+          "url": "/uploads/highlights_03_94389991bc.jpg"
+        }
+      },
+      {
+        "id": 1645,
+        "Title": "Mafia: The Old Country",
+        "IsActive": true,
+        "Url": "product/mafia-the-old-country/",
+        "Subtitle": "اکانت قانونی PS5",
+        "Header": "خرید بازی Mafia: The Old Country",
+        "Image": {
+          "url": "/uploads/highlights_04_055fda1b9d.jpg"
+        }
+      },
+      {
+        "id": 1646,
+        "Title": "God of War Ragnarök",
+        "IsActive": true,
+        "Url": "product/god-of-war-ragnarok/",
+        "Subtitle": "خشم کریتوس را تجربه کن؛ نبرد برای بقا آغاز شده!",
+        "Header": "نبردی افسانه‌ای میان خدایان و انسان‌ها! ⚔️🔥",
+        "Image": {
+          "url": "/uploads/GOW_R_13ccfce560.jpg"
+        }
+      },
+      {
+        "id": 1647,
+        "Title": "Ghost of Yōtei",
+        "IsActive": true,
+        "Url": "product/ghost-of-yotei/",
+        "Subtitle": "اکنون خرید کنید و افسانه خود را آغاز نمایید.",
+        "Header": "سایه‌های جنگ بر کوه یوتِی سنگینی می‌کند! ⚔️🌫️",
+        "Image": {
+          "url": "/uploads/ghost_of_yotei_2d58b1e370.jpg"
+        }
+      },
+      {
+        "id": 1648,
+        "Title": "Code Violet",
+        "IsActive": true,
+        "Url": "product/code-violet",
+        "Subtitle": "همین حالا بخر و داستان مرموز این بازی رو تجربه کن!",
+        "Header": "به دنیای مرموز و سایه‌وار کُد وارد شو! 🔮💻",
+        "Image": {
+          "url": "/uploads/code_violet_b383009b72.jpg"
+        }
+      }
+    ]
   }
 ];
 
