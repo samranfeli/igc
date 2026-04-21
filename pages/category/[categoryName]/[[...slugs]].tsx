@@ -23,7 +23,7 @@ import { useIsDesktop } from "@/hooks/use-is-desktop";
 
 type Props = {
     categoryName?: string;
-    brandData?: {
+    categoryData?: {
         fileAltAttribute?: string;
         filePath?: string;
         fileTitleAttribute?: string;
@@ -45,7 +45,7 @@ const Products: NextPage<Props> = props => {
 
     const dispatch = useAppDispatch();
 
-    const {brandData} = props;
+    const {categoryData} = props;
 
     const [products, setProducts] = useState<ProductItem[]>(props.productsData?.pagedResult?.items || []);
     const [fetchMode, setFetchMode] = useState<boolean>(false);
@@ -53,17 +53,19 @@ const Products: NextPage<Props> = props => {
 
 
     //TODO: remove this useEffect:
-    useEffect(() => {
-        const fetchDatas = async () => {
+    // useEffect(() => {
+    //     const fetchData = async () => {
             
-            const token = localStorage.getItem("Token");
+    //         const token = localStorage.getItem("Token");
 
-            const parameters = { ...props.parameters };
-            await getProducts(parameters);
-            await  getCategoryBySlug({slug: props.categoryName || "" , token : token || ""})
-        }
-        fetchDatas();
-    }, [router.asPath]);
+    //         const parameters = { ...props.parameters };
+    //         await getProducts(parameters);
+    //         const res: any = await  getCategoryBySlug({slug: props.categoryName || "" , token : token || ""});
+    //         console.log(res.data?.result);
+    //         debugger;
+    //     }
+    //     fetchData();
+    // }, [router.asPath]);
 
 
     useEffect(() => {
@@ -76,7 +78,7 @@ const Products: NextPage<Props> = props => {
 
     const changePageHandel = (p: number) => {
         const otherSlugs = props.slugs?.filter(item => !(item.includes("page-"))) || [];
-        const segments = ["/products", ...otherSlugs, `page-${p}`];
+        const segments = ["/category", props.categoryName, ...otherSlugs, `page-${p}`];
         const newUrl = segments.join("/");
         router.push({
             pathname: newUrl,
@@ -157,19 +159,19 @@ const Products: NextPage<Props> = props => {
             <Breadcrumb
                 items={[
                     { label: "محصولات", link: "/products" },
-                    { label: brandData?.name || "نامشخص", link: "" }
+                    { label: categoryData?.name || "نامشخص", link: "" }
                 ]}
                 wrapperClassName="mb-4"
             />
 
-            {brandData?.filePath && <Image
-                src={brandData.filePath}
-                alt={brandData.fileAltAttribute || brandData.fileTitleAttribute || brandData.name || ""}
+            {categoryData?.filePath && <Image
+                src={categoryData.filePath}
+                alt={categoryData.fileAltAttribute || categoryData.fileTitleAttribute || categoryData.name || ""}
                 width={400}
                 height={200}
                 className="h-24 w-24 block mt-8 mx-auto"
             />}
-            {brandData?.name && <h2 className="px-5 text-lg font-semibold mb-10 mt-3 text-[#fd7e14] dark:text-[#ffefb2] text-center"> {brandData?.name} </h2>}
+            {categoryData?.name && <h2 className="px-5 text-lg font-semibold mb-10 mt-3 text-[#fd7e14] dark:text-[#ffefb2] text-center"> {categoryData?.name} </h2>}
 
 
             <div className="max-lg:hidden-scrollbar lg:styled-scrollbar md:pb-3 md:-mb-3 overflow-x-auto overflow-y-clip pl-3">
@@ -237,9 +239,18 @@ const Products: NextPage<Props> = props => {
                 {!!(props.productsData?.pagedResult?.totalCount && products.length < props.productsData.pagedResult.totalCount) && (
                     <div ref={loadMoreWrapper}>
                         {products.length < 100 && !selectedPage ? (
-                            <br />
+                            <div className="text-center py-2">
+                                <button
+                                    type="button"
+                                    className="bg-gradient-violet text-white rounded-full px-5 h-12 w-full sm:max-w-72 text-xs mt-6"
+                                    onClick={addItems}
+                                >
+                                    مشاهده موارد بیشتر
+                                </button>
+                            </div>
                         ) : (
                             <Pagination2
+                                wrapperClassName="max-w-[450px] mx-auto mt-6"
                                 onChange={e => { changePageHandel(e) }}
                                 totalItems={props.productsData.pagedResult.totalCount}
                                 itemsPerPage={20}
@@ -333,7 +344,7 @@ export async function getServerSideProps(context: any) {
     }
 
     const [categoryResponse, productsResponse] = await Promise.all<any>([
-        getCategoryBySlug(context?.query?.categoryName),
+        getCategoryBySlug({slug: context?.query?.categoryName, token:""}),
         getProducts(parameters)
     ]);
 
@@ -341,7 +352,7 @@ export async function getServerSideProps(context: any) {
         {
             props: {
                 categoryName: context?.query?.categoryName || null,
-                brandData: categoryResponse?.data?.result || null,
+                categoryData: categoryResponse?.data?.result || null,
                 productsData: productsResponse?.data?.result || null,
                 slugs: slugs || null,
                 page: selectedPage || null,
