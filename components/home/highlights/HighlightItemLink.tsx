@@ -4,6 +4,7 @@ type Props = {
     Image: string;
     Title: string;
     open: () => void;
+    keyword: string;
 }
 
 const HighlightItemLink: React.FC<Props> = props => {
@@ -24,7 +25,7 @@ const HighlightItemLink: React.FC<Props> = props => {
                 />
             </div>
             <div className="text-xs text-center w-20">
-                {props.Title}
+                {props.Title} 
             </div>
         </button>
     )

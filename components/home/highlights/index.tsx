@@ -7,7 +7,7 @@ import { HighlightItemType } from '@/types/highlight'
 import ModalPortal from '@/components/shared/layout/ModalPortal'
 import Image from 'next/image'
 import CloseSimple from '@/components/icons/CloseSimple'
-import HighlightItemSlider from './HightlightItemSlider'
+import HighlightItemSlider from './HighlightItemSlider'
 
 type Props = {
   highlights: HighlightItemType[];
@@ -45,10 +45,11 @@ useEffect(() => {
 
   if (highlights.length) {
     return (
-      <section className="max-lg:hidden-scrollbar lg:styled-scrollbar lg:px-5 lg:pb-2 lg:mb-2 overflow-x-auto overflow-y-clip py-3">
-        <div className="flex items-start justify-center gap-3 max-lg:px-3" dir={props.direction}>
+      <section className="max-lg:hidden-scrollbar lg:styled-scrollbar lg:px-5 lg:pb-2 lg:mb-2 overflow-x-auto overflow-y-clip py-3 text-center">
+        <div className="inline-flex items-start gap-3 max-lg:px-3" dir={props.direction}>
           {highlights.map((highlight) => (
             <HighlightItemLink
+              keyword={highlight.Keyword}
               open={() => {
                 setActiveHighlightId(highlight.id)
               }}
@@ -61,7 +62,7 @@ useEffect(() => {
               key={highlight.id}
             />
           ))}
-          <div className='p-0.5 inline-block' />
+          {/* <div className='p-0.5 inline-block' /> */}
         </div>
 
         <ModalPortal
@@ -142,6 +143,7 @@ useEffect(() => {
                               return undefined
                             })
                           }}
+                          dummyItems={highlight.dummyItems}
                         />
 
                         <div className="absolute bottom-1.5 right-3 flex gap-1 text-2xs items-center">

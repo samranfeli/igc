@@ -7,31 +7,35 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
+export type HighlightSliderItemType = {
+  id: number
+  Title?: string
+  IsActive: boolean
+  Url?: string | null;
+  Subtitle?: string
+  Header?: string
+  Image?: {
+    url?: string;
+    [key: string]: any;
+  }
+}
+
 type Props = {
   keyword: string
   isActive: boolean
   goToNextHighlight: () => void
   goToPreviousHighlight: () => void
   direction: "ltr" | "rtl";
-}
-
-type DataItemType = {
-  id: number
-  Title?: string
-  IsActive: boolean
-  Url?: string
-  Subtitle?: string
-  Header?: string
-  Image?: {
-    url?: string
-  }
+  
+  //laterTOdo: remove dummyItems;
+  dummyItems?: HighlightSliderItemType[];
 }
 
 const HighlightItemSlider: React.FC<Props> = (props) => {
   const duration = 4000
 
   const [activeIndex, setActiveIndex] = useState<number>(0)
-  const [items, setItems] = useState<DataItemType[] | undefined>()
+  const [items, setItems] = useState<HighlightSliderItemType[] | undefined>(props.dummyItems);
 
   const [loading, setLoading] = useState(false)
 
