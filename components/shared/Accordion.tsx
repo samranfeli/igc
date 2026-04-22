@@ -64,7 +64,7 @@ const Accordion: React.FC<Props> = props => {
           <div
             className={`leading-5 relative font-semibold select-none cursor-pointer py-2 pl-12`}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <div onClick={toggle}>{title}</div>
               {extraInTitle}
             </div>

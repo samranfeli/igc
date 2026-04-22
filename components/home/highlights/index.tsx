@@ -143,7 +143,7 @@ useEffect(() => {
                               return undefined
                             })
                           }}
-                          dummyItems={highlight.dummyItems}
+                          dummyItems={highlight.dummyItems?.slice(0,20)}
                         />
 
                         <div className="absolute bottom-1.5 right-3 flex gap-1 text-2xs items-center">
