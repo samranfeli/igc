@@ -1,14 +1,14 @@
-import { FilterItems, ProductItem } from "@/types/commerce";
+import { ProductItem, ProductItemDeveloper, ProductItemGameplay, ProductItemGenres, ProductItemPlayerPerspective, ProductItemPublisher, ProductItemTheme } from "@/types/commerce";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type Products = {
     availableFilters: {
-        publishers: ProductItem["publisher"][];
-        developers: ProductItem["developer"][];
-        gameplays: ProductItem["gameplay"];
-        genres: ProductItem["genres"];
-        themes: ProductItem["theme"];
-        playerPerspectives: ProductItem["playerPerspective"];
+        publishers: ProductItemPublisher[];
+        developers: ProductItemDeveloper[];
+        gameplays: ProductItemGameplay[];
+        genres: ProductItemGenres[];
+        themes: ProductItemTheme[];
+        playerPerspectives: ProductItemPlayerPerspective[];
         pegis: ProductItem["pegi"][];
         esrbs: ProductItem["esrb"][];
         variants: {
