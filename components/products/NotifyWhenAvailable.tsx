@@ -9,7 +9,7 @@ type Props = {
 };
 
 const NotifyWhenAvailable: React.FC<Props> = (props) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   return (
     <SimplePortal

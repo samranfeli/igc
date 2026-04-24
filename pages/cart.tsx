@@ -40,7 +40,7 @@ export default function CartPage() {
       getCurrencyLabelFa(currencyStore);
 
       
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   useEffect(()=>{
     dispatch(setHeaderParams({

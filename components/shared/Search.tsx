@@ -54,7 +54,7 @@ const Search = () => {
         }
     }, [slideIn]);
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const [recentSearchList, setRecentSearchList] = useState<string[]>([]);
 

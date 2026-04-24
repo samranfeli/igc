@@ -23,7 +23,7 @@ import { useEffect, useState } from "react";
 
 export default function PaymentPage() {
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
   const searchParams = useSearchParams();

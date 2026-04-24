@@ -25,7 +25,7 @@ type Props = {
 
 const DetailBlog: NextPage<Props> = (props) => {
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const [data, setData] = useState<BlogDetailType | undefined>(props.data);
   const [similarPosts, setSimilarPosts] = useState<BlogListItemType[] | undefined>(props.similarPosts);

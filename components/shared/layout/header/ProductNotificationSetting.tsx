@@ -22,7 +22,7 @@ type Props = {
 };
 
 const ProductNotificationSetting: React.FC<PropsWithChildren<Props>> = (props) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
 

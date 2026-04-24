@@ -26,7 +26,7 @@ const SimilarProducts: React.FC<Props> = props => {
 
     const {query} = router;
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const queryVariant = query.variant;
     const queryPlatform = query.platform as PlatformSlugTypes || undefined;

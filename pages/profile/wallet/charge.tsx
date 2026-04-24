@@ -17,7 +17,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Charge = () => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const userBalanceLoading = useAppSelector(
     (state) => state.authentication.balanceLoading,

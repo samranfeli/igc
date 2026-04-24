@@ -40,7 +40,7 @@ const VariantFooter = ({
   
   const { getCartByProductId, addItem, removeItem, getCart } = useCartApi();
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
 

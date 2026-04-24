@@ -16,7 +16,7 @@ type Props = {
 
 const SortProducts: React.FC<Props> = props => {
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     // const [selected, setSelected] = useState<ProductSortKeywords | undefined>(props.activeKeyword);
 

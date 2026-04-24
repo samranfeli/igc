@@ -100,7 +100,7 @@ type Props = {
 
 const Home: NextPage<Props> = props => {
 
-  const isDesktop = useIsDesktop();
+  const { isDesktop} = useIsDesktop();
 
   const {homeAboutData, homeHighlights, homeSections,recentBlogs, playstation4Data, playstation5Data, steamData, xboxOneData, xboxSeriesXsData, nintendoSwitch2Data} = props;
 

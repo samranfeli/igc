@@ -18,7 +18,7 @@ const MoreWrapper: React.FC<Props> = (props) => {
 
   const dispatch = useAppDispatch();
 
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const [openDetails, setOpenDetails] = useState<boolean>(false);
   const [slideInDetails, setSlideInDetails] = useState<boolean>(false);

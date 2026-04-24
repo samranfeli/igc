@@ -30,7 +30,7 @@ type Props = {
 type SortTypes = "Newest" | "MostAnswered";
 
 const UserQuestionAnswer: React.FC<Props> = (props) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const [sort, setSort] = useState<SortTypes>("MostAnswered");
   const [questions, setQuestions] = useState<QuestionItemType[]>(

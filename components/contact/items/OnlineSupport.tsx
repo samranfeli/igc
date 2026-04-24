@@ -23,7 +23,7 @@ type Props = {
 
 const OnlineSupport : React.FC<Props> = props => {
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const [open, setOpen] = useState<boolean>(false);
     const [slideIn, setSlideIn] = useState<boolean>(false);

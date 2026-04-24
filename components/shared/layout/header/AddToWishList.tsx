@@ -21,7 +21,7 @@ type Props = {
 };
 
 const AddToWishList: React.FC<Props> = (props) => {
-  const isDesktop = useIsDesktop();
+  const {isDesktop} = useIsDesktop();
 
   const dispatch = useAppDispatch();
 

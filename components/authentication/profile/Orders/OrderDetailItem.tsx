@@ -20,7 +20,7 @@ const OrderDetailItem : React.FC<Props> = props => {
     
     const {itemData: data} = props;
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop} = useIsDesktop();
 
     const [open, setOpen] = useState<boolean>(false);
     const [slideIn, setSlideIn] = useState<boolean>(false);

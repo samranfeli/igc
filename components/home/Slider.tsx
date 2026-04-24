@@ -23,11 +23,15 @@ type Props = {
 
 const Slider: React.FC<Props> = props => {
 
-    const isDesktop = useIsDesktop();
+    const {isDesktop, initializing} = useIsDesktop();
     
     //laterTOdo: restore commented code and use Strapi data; 
     //const createImageUrl = (u: string) => ServerAddress.Type! + ServerAddress.Strapi + u;
     const createImageUrl = (u: string) => u;
+
+    if(initializing){
+        return null;
+    }
     
     if (props.items.length === 1 && !isDesktop) {
 
