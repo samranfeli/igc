@@ -37,12 +37,13 @@ const Call : React.FC<Props> = props => {
 
     const isActive = isWithinWorkingHours();
 
-    let callLink = "";
-    if(props.InnerData?.Value?.startsWith('0')){
-        callLink = "tel:+98"+ (props.InnerData.Value.slice(1));
-    }
+    const callLink = "tel:+982182800104";
+    // let callLink = "";
+    // if(props.InnerData?.Value?.startsWith('0')){
+    //     callLink = "tel:+98"+ (props.InnerData.Value.slice(1));
+    // }
 
-        let modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-t-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full safePadding-b transition-all left-0 right-0 ${slideIn ? "bottom-0" : "-bottom-[80vh]"}`
+    let modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-t-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full safePadding-b transition-all left-0 right-0 ${slideIn ? "bottom-0" : "-bottom-[80vh]"}`
 
     if (isDesktop) {
         modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full max-w-lg transition-all top-1/2 right-1/2 translate-x-1/2 ${slideIn ? "-translate-y-1/2 opacity-100" : "translate-y-0 opacity-0"}`
@@ -51,7 +52,7 @@ const Call : React.FC<Props> = props => {
     return(
         <>
         <button
-            onClick={()=>{if(isActive || 1+1===2) setOpen(true)}}
+            onClick={()=>{if(isActive) setOpen(true)}}
             type="button"
             className={`text-right dark:text-white min-h-20 w-full mb-3 py-4 px-5 rounded-xl ${isActive?"bg-gradient-to-t from-[#eeeeee] to-[#e1e1e1] dark:from-[#01212e] dark:to-[#102c33]":"text-neutral-400 bg-[#efefef] dark:bg-[#1a1e2e]"}`}
         >
@@ -104,7 +105,10 @@ const Call : React.FC<Props> = props => {
                                 />
                             </div>
                             
-                            <strong className="text-2xl font-semibold"> {props.InnerData?.Value} </strong>
+                            <strong className="text-2xl font-semibold" dir="ltr"> 
+                                {/* {props.InnerData?.Value}  */}
+                                021 82800104
+                            </strong>
 
                             <p className="text-xs"> {props.InnerData?.Description} </p>                        
                             

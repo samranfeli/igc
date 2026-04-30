@@ -12,6 +12,7 @@ import { useAppDispatch } from "@/hooks/use-store";
 import { setBodyScrollPosition, setBodyScrollable } from "@/redux/stylesSlice";
 import { dateDisplayFormat, dateFormat } from "@/helpers";
 import CalendarIcon from "../icons/CalendarIcon";
+import { useIsDesktop } from "@/hooks/use-is-desktop";
 
 const Calendar = dynamic(
     () => import("react-multi-date-picker").then((mod) => mod.Calendar),
@@ -30,6 +31,8 @@ type Props = {
 const DatePickerM: React.FC<Props> = props => {
 
     let initialValue : any =  null;
+
+    const {isDesktop} = useIsDesktop();
     
     if(props.initialValue){
         initialValue = props.initialValue.map(x => x ? new Date(x) : null);
@@ -97,12 +100,18 @@ const DatePickerM: React.FC<Props> = props => {
 
     }
 
+    let modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-t-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full safePadding-b transition-all left-0 right-0 ${slideIn ? "bottom-0" : "-bottom-[80vh]"}`
+
+    if (isDesktop) {
+        modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full max-w-md transition-all top-1/2 right-1/2 translate-x-1/2 ${slideIn ? "-translate-y-1/2 opacity-100" : "translate-y-0 opacity-0"}`
+    }
+
     return (
         <>
             <button
                 type="button"
-                className={`bg-[#2e3e4b] rounded-full h-10 w-full border-none outline-none px-5 text-right text-sm ${props.className || ""}`}
-                onClick={() => { setOpen(true) }}
+                className={`bg-white border border-neutral-300 dark:bg-[#2e3e4b] rounded-full h-10 w-full dark:border-none outline-none px-5 text-right text-sm ${props.className || ""}`}
+                onClick={() => { setOpen(true)}}
             >
                 {text}
             </button>
@@ -113,9 +122,9 @@ const DatePickerM: React.FC<Props> = props => {
             >
                 <div className="bg-black/50 backdrop-blur-sm fixed top-0 left-0 right-0 bottom-0" onClick={() => { setSlideIn(false) }} />
 
-                <div className={`bg-[#fff] rounded-t-2xl fixed w-full md:max-w-lg safePadding-b overflow-y-auto max-h-[90vh] transition-all left-0 max-md:right-0 md:right-1/2 md:translate-x-1/2  bottom-0 ${slideIn ? "translate-y-0" : "translate-y-[80vh]"}`}>
+                <div className={modalWrapperClass}>
 
-                    <div className="flex justify-between items-center p-4 text-neutral-800">
+                    <div className="flex justify-between items-center p-4 text-neutral-800 dark:text-white">
                         {props.modalLabel ? <label className="font-semibold text-base block"> {props.modalLabel} </label> : <label className="font-semibold text-sm block" > {text} </label>}
                         <button
                             type="button"
@@ -142,7 +151,7 @@ const DatePickerM: React.FC<Props> = props => {
                     <div className="flex gap-4 mt-7 py-2 pb-5 px-4">
                         <button
                             type="button"
-                            className="shrink-0 w-24 rounded-full px-5 py-2.5 bg-[#bbbbbb] text-sm font-semibold"
+                            className="shrink-0 w-24 rounded-full px-5 py-2.5 bg-[#bbbbbb] dark:bg-[#011425] text-sm font-semibold"
                             onClick={() => { setSlideIn(false) }}
                         >
                             بستن
