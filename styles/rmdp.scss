@@ -44,7 +44,7 @@ body {
         span {
             background: transparent;
         }
-        &:not(.rmdp-range-hover):not(.rmdp-range):not(.end) {
+        &:not(.rmdp-range-hover):not(.rmdp-range):not(.end):not(.rmdp-selected) {
             span {
                 color: #a93aff;
             }
@@ -60,5 +60,23 @@ body {
     .rmdp-week, .rmdp-ym{
         gap: 1px;
         margin-top: 1px;
+    }
+}
+@media screen and (min-width:1200px) {
+    body .rmdp-wrapper{
+        margin-top: 0;
+    }
+}
+
+html.dark {
+    .rmdp-wrapper,
+    .rmdp-month-picker, 
+    .rmdp-year-picker{
+        background-color:#192a39;
+        color: #fff ;
+    }
+    .rmdp-day:not(.rmdp-disabled, .rmdp-day-hidden) span,
+    .rmdp-header-values{
+        color: #fff;
     }
 }

@@ -85,14 +85,14 @@ const TransactionsFilter: React.FC<Props> = props => {
                             <div className="flex gap-4 mt-7">
                                 <button
                                     type="button"
-                                    className="shrink-0 w-24 rounded-full px-5 py-2.5 bg-[#011425] text-sm"
+                                    className="shrink-0 w-24 rounded-full px-5 py-2.5 bg-[#bbbbbb] dark:bg-[#011425] text-sm"
                                     onClick={props.close}
                                 >
                                     بستن
                                 </button>
                                 <button
                                     type="submit"
-                                    className="w-full rounded-full px-5 py-2.5 bg-[#a93aff] text-sm"
+                                    className="w-full rounded-full px-5 py-2.5 text-white bg-[#a93aff] text-sm"
                                 >
                                     ثبت تغییرات
                                 </button>

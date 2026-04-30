@@ -5,8 +5,8 @@ import {
   getTransactionDeposit,
 } from "@/actions/payment";
 import ProfileSideBar from "@/components/authentication/profile/ProfileSideBar";
-import TransactionItem from "@/components/authentication/profile/tansactions/TransactionItem";
-import TransactionsFilter from "@/components/authentication/profile/tansactions/TransactionsFilter";
+import TransactionItem from "@/components/authentication/profile/transactions/TransactionItem";
+import TransactionsFilter from "@/components/authentication/profile/transactions/TransactionsFilter";
 import ArrowRight from "@/components/icons/ArrowRight";
 import Download from "@/components/icons/Download";
 import Filter from "@/components/icons/Filter";
@@ -95,6 +95,12 @@ const Transactions = () => {
       }
     }
   };
+
+  let modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-t-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full safePadding-b transition-all left-0 right-0 ${slideInFilters ? "bottom-0" : "-bottom-[80vh]"}`
+
+  if (isDesktop) {
+      modalWrapperClass = `bg-white dark:bg-[#192a39] text-neutral-800 dark:text-white rounded-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full max-w-md transition-all top-1/2 right-1/2 translate-x-1/2 ${slideInFilters ? "-translate-y-1/2 opacity-100" : "translate-y-0 opacity-0"}`
+  }
 
   return (
     <>
@@ -191,9 +197,7 @@ const Transactions = () => {
           }}
         />
 
-        <div
-          className={`bg-[#192a39] text-white rounded-t-2xl max-h-95-screen hidden-scrollbar overflow-y-auto fixed w-full md:max-w-lg safePadding-b transition-all left-0 max-md:right-0 md:right-1/2 md:translate-x-1/2 ${slideInFilters ? "bottom-0" : "-bottom-[80vh]"}`}
-        >
+        <div className={modalWrapperClass}>
           <TransactionsFilter
             filterType={filterType}
             filterEndDate={filterEndDate}

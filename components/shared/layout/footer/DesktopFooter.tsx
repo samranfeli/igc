@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FooterNamad from "./FooterNamad";
 
 const DesktopFooter = () => {
   const socialMediaLink: {
@@ -76,6 +77,15 @@ const DesktopFooter = () => {
               </Link>
             ))}
           </div>
+          
+          <FooterNamad />
+
+        </div>
+      </div>
+      <div className="flex justify-between items-center py-3 border-t border-neutral-300 dark:border-white/15">
+        <div className="text-[11px]">
+          © ۱۴۰۴ - تمام حقوق مربوط به وب سایت ایران گیم سنتر می باشد.
+        </div>
 
           <div className="flex gap-3 items-center">
             {socialMediaLink.map((item) => (
@@ -95,12 +105,9 @@ const DesktopFooter = () => {
               </Link>
             ))}
           </div>
-        </div>
+
       </div>
 
-      <div className="text-[11px] border-t text-center border-neutral-300 dark:border-white/15 py-5">
-        © ۱۴۰۴ - تمام حقوق مربوط به وب سایت ایران گیم سنتر می باشد.
-      </div>
     </footer>
   );
 };
