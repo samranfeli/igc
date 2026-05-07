@@ -8,7 +8,6 @@ import Intro from "@/components/about/Intro";
 import FAQ from "@/components/shared/FAQ";
 //import { getStrapiHighlight, getStrapiPages } from "@/actions/strapi";
 import { NextPage } from "next";
-import { ServerAddress } from "@/enum/url";
 import Highlights from "@/components/home/highlights";
 import { HighlightItemType } from "@/types/highlight";
 import { getBlogsList } from "@/actions/blog";
@@ -234,7 +233,8 @@ const Home: NextPage<Props> = props => {
         title: item.Title || "",
         url: item.Url || "#",
         subtitle: item.Subtitle,
-        imageUrl: ServerAddress.Type! + ServerAddress.Strapi + item.Image.url,
+        //imageUrl: ServerAddress.Type! + ServerAddress.Strapi + item.Image.url,
+        imageUrl: item.Image.url,
         imageAlt: item.ImageAlternative,
         imageTitle: item.ImageTitle
       }))} />
@@ -253,7 +253,8 @@ const Home: NextPage<Props> = props => {
           title: item.Title || "",
           url: item.Url || "#",
           subtitle: item.Subtitle,
-          imageUrl: ServerAddress.Type! + ServerAddress.Strapi + item.Image.url,
+          //imageUrl: ServerAddress.Type! + ServerAddress.Strapi + item.Image.url,
+          imageUrl: item.Image.url,
           imageAlt: item.ImageAlternative,
           imageTitle: item.ImageTitle
         }))}

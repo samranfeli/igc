@@ -2,7 +2,6 @@
 
 //import { getStrapiPages } from "@/actions/strapi";
 import { faqStrapiData, faqStrapiSeoData } from "@/dummyData/faqStrapiData";
-import { ServerAddress } from "@/enum/url";
 import { useAppDispatch } from "@/hooks/use-store";
 import { setHeaderParams } from "@/redux/pages";
 import { StrapiSeoData } from "@/types/commerce";
@@ -57,7 +56,8 @@ const Faq: NextPage = ({ strapiData, strapiSeoData }: { strapiData?: StrapiData,
     </Head>
     <div className="px-5 lg:max-w-[500px] lg:mx-auto lg:py-10 grid grid-cols-2 gap-5">
       {strapiData?.map(item => {
-        const imagePath = item.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}${item.icon?.url}` : undefined;
+        const imagePath = item.icon?.url || undefined;
+        //const imagePath = item.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}${item.icon?.url}` : undefined;
         return(
         <Link
           prefetch={false}

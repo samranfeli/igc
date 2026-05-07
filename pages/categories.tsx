@@ -78,7 +78,15 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
                                     className={`p-2 aspect-square shrink-0 min-w-28 grow-0 shadow dark:box-shadow-none ${activeItemId === cat.id ? "bg-white/90 text-neutral-800" : "bg-[#eeeeee] dark:bg-[#192b39] text-[#333] dark:text-white"} text-center text-2xs block relative`}
                                 >
                                     <span className={`absolute block h-1.5 w-full right-0 bottom-0 ${activeItemId === cat.id ? "bg-gradient-to-r from-[#fe707b] to-[#ff9b91]" : "bg-transparent"}`} />
-                                    <Image src={cat.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${cat.Image.url}` : "/images/default-game.png"} alt={cat.Title} title={cat.Title} width={94} height={32} className="w-full h-8  block object-contain px-2 mb-1.5" />
+                                    <Image 
+                                        src={cat.Image?.url || "/images/default-game.png"} 
+                                        /* src={cat.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${cat.Image.url}` : "/images/default-game.png"}  */
+                                        alt={cat.Title} 
+                                        title={cat.Title} 
+                                        width={94} 
+                                        height={32} 
+                                        className="w-full h-8  block object-contain px-2 mb-1.5" 
+                                    />
                                     {cat.Title}
                                 </button>
                             ))}
@@ -93,7 +101,14 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
                                     href={`${item.Slug}`}
                                     className="text-xs block grow-0 shrink-0 w-40 py-5 text-center shadow dark:box-shadow-none bg-white rounded-xl text-black"
                                 >
-                                    <Image src={item.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${item.Image.url}` : "/images/default-game.png"} alt={item.Title} width={100} height={100} className="w-12 h-12 block mb-2 mx-auto" />
+                                    <Image 
+                                        src={item.Image?.url || "/images/default-game.png"} 
+                                        /* src={item.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${item.Image.url}` : "/images/default-game.png"}  */
+                                        alt={item.Title} 
+                                        width={100} 
+                                        height={100} 
+                                        className="w-12 h-12 block mb-2 mx-auto" 
+                                    />
                                     {item.Title}
                                 </Link>
                             ))}

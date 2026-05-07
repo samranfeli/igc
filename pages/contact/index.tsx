@@ -8,7 +8,6 @@ import { setHeaderParams } from "@/redux/pages";
 import Accordion from "@/components/shared/Accordion";
 import Markdown from "react-markdown";
 import Ticketing from "@/components/contact/items/Ticketing";
-import { ServerAddress } from "@/enum/url";
 import OnlineSupport from "@/components/contact/items/OnlineSupport";
 import Call from "@/components/contact/items/Call";
 import Image from "next/image";
@@ -100,19 +99,22 @@ const Contact: NextPage = ({ contacts, faq, strapiSeoData }: { contacts?: Contac
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-3 lg:mt-10">
 
               <Ticketing 
-                icon={ticketingData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${ticketingData.icon.url}` : ""}
+                icon={ticketingData?.icon?.url || ""}
+                /* icon={ticketingData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${ticketingData.icon.url}` : ""} */
                 label={ticketingData?.Title}
                 url={ticketingData?.Url}
               />
 
               <OnlineSupport 
-                icon={onlineSupportData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${onlineSupportData.icon.url}` : ""}
+                icon={onlineSupportData?.icon?.url || ""}
+                /* icon={onlineSupportData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${onlineSupportData.icon.url}` : ""} */
                 label={onlineSupportData?.Title}
                 items = {onlineSupportData?.Items}
               />
 
               <Call 
-                icon={callData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${callData.icon.url}` : ""}
+                icon={callData?.icon?.url || ""}
+                /* icon={callData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${callData.icon.url}` : ""} */
                 label={callData?.Title}    
                 description={callData?.Subtitle} 
                 InnerData={callData?.Items?.[0]}     
@@ -123,8 +125,9 @@ const Contact: NextPage = ({ contacts, faq, strapiSeoData }: { contacts?: Contac
                   className="mb-3 dark:text-white py-4 min-h-20 px-5 bg-gradient-to-t from-[#eeeeee] to-[#e1e1e1] dark:from-[#01212e] dark:to-[#102c33] rounded-xl"
               >
                 <div className="text-sm font-semibold flex gap-4 items-center mb-3">
-                  <Image 
-                      src={addressData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${addressData.icon.url}` : ""}
+                  <Image
+                      /* src={addressData?.icon?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${addressData.icon.url}` : ""} */ 
+                      src={addressData?.icon?.url || ""}
                       alt={addressData?.Title ||""}
                       width={36}
                       height={36}
