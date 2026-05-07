@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ServerAddress } from "@/enum/url";
 
 type Props = {
     items: {
@@ -20,7 +19,8 @@ const AboutIcons: React.FC<Props> = props => {
                 >
                     {!!item.Image?.url && (
                         <Image 
-                            src={ServerAddress.Type!+ServerAddress.Strapi+item.Image.url} 
+                            /* src={ServerAddress.Type!+ServerAddress.Strapi+item.Image.url}  */
+                            src={item.Image.url} 
                             alt={item.Title||""}
                             width={100}
                             height={100}

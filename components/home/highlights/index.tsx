@@ -1,6 +1,5 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { ServerAddress } from '@/enum/url'
 import { useEffect, useState } from 'react'
 import HighlightItemLink from './HighlightItemLink'
 import { HighlightItemType } from '@/types/highlight'
@@ -55,7 +54,8 @@ useEffect(() => {
               }}
               Image={
                 highlight.Item?.Image?.url
-                  ? `${ServerAddress.Type}${ServerAddress.Strapi}${highlight.Item.Image.url}`
+                  //? `${ServerAddress.Type}${ServerAddress.Strapi}${highlight.Item.Image.url}`
+                  ? `${highlight.Item.Image.url}`
                   : '/images/default-game.png'
               }
               Title={highlight.Item?.Title || ''}
@@ -150,7 +150,8 @@ useEffect(() => {
                           <Image
                             src={
                               highlight?.Item?.Image.url
-                                ? `${ServerAddress.Type}${ServerAddress.Strapi}${highlight.Item.Image.url}`
+                              //? `${ServerAddress.Type}${ServerAddress.Strapi}${highlight.Item.Image.url}`
+                                ? highlight.Item.Image.url
                                 : '/images/default-game.png'
                             }
                             alt={highlight?.Item?.Title || ''}
