@@ -119,6 +119,7 @@ export interface ProductVariant {
         inventory?: "Unlimited" | "Limited";
         id: number;
         description?: string;
+        isVirtual: boolean;
     }[];
 }
 export interface SingleVariant {

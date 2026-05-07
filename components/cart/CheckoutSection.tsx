@@ -274,7 +274,7 @@ const CheckoutSection = () => {
                                         <div className="w-full flex justify-between items-center">
                                             <div className="flex gap-3 items-center">
                                                 <span>موبایل</span>
-                                                <Image src={'/images/icons/check-gradient-green.svg'} width={28} height={28} alt="verified-mobile"/>
+                                                <Image src={'/images/icons/check-gradient-green.svg'} className="w-5 h-5" width={20} height={20} alt="verified-mobile"/>
                                             </div>
                                             <p className="bg-gradient-to-b from-[#00B59C] to-[#9CFFAC] bg-clip-text text-transparent">
                                                 تایید شده

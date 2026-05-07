@@ -1,10 +1,10 @@
 {
   "name": "Iran Game Center",
-  "short_name": "Iran Game Center",
+  "short_name": "IGC",
   "start_url": "/",
   "description": "Iran Game Center - اخبار و دانلود بازی",
   "display": "standalone",
-  "theme_color": "#fe5d71",
+  "theme_color": "#fe7b80",
   "background_color": "#ffffff",
   "scope": ".",
   "orientation": "portrait-primary",
