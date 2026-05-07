@@ -35,6 +35,8 @@ import UserQuestionAnswer from '@/components/products/userQuestions/UserQuestion
 import ModalPortal from '@/components/shared/layout/ModalPortal';
 import Otp from '@/components/authentication/profile/OTP';
 import LoginWithPassword from '@/components/authentication/LoginWithPassword';
+import ThreeBadges from '@/components/shared/ThreeBadges';
+import SnappPayBadge from '@/components/shared/SnappPayBadge';
 
 type Props = {
   serverSideProductData?: ProductDetailData;
@@ -921,24 +923,31 @@ const DetailProduct: NextPage<Props> = props => {
             </div>
           </div>
 
-          <div className='col-span-6 2xl:col-span-7 text-white min-h-480'>
+          <div className='col-span-6 3xl:col-span-7 text-white min-h-480'>
             {intro}
 
             {variant}
+
+            <SnappPayBadge wrapperClassName='bg-black/35' />
+
           </div>
 
           <div 
-            id="variant-footer-desktop-modal" 
-            className='flex flex-col justify-end p-4 2xl:p-6 rounded-2xl col-span-3 2xl:col-span-2 bg-gradient-to-t from-[#011426] to-transparent' 
+            className='flex flex-col justify-end rounded-2xl col-span-3 3xl:col-span-2 bg-gradient-to-t from-[#011426] to-transparent' 
           >
-            {variantsLoading && (
-              <>
-                <div className='text-left'>
-                  <Skeleton className='h-4 mb-4 w-17 inline-block' dark />
-                </div>
-                <Skeleton className='h-11 rounded-full' dark type='button' />
-              </>
-            )}
+            <div className='p-4 2xl:p-6' id="variant-footer-desktop-modal" >
+                {variantsLoading && (
+                  <>
+                    <div className='text-left'>
+                      <Skeleton className='h-4 mb-4 w-17 inline-block' dark />
+                    </div>
+                    <Skeleton className='h-11 rounded-full' dark type='button' />
+                  </>
+                )}
+            </div>
+            <div className='p-5 bg-[#0b2932] text-white rounded-b-2xl'>
+              <ThreeBadges />
+            </div>
 
           </div>
 
@@ -995,6 +1004,12 @@ const DetailProduct: NextPage<Props> = props => {
       {description}
 
       {variant}
+
+      <SnappPayBadge wrapperClassName='mb-5 mx-5 border border-[#853ccd]' />
+      
+      <div className='p-5 bg-[#e7ede9] dark:bg-[#0b2932] rounded-2xl mb-5 mx-5'>
+        <ThreeBadges />
+      </div>
 
       {rating}
 
