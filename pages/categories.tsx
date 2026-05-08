@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ArrowTopLeft from "@/components/icons/ArrowTopLeft";
 //import { getStrapiCategories } from "@/actions/strapi";
-import { ServerAddress } from "@/enum/url";
+/* import { ServerAddress } from "@/enum/url"; */
 import { useAppDispatch } from "@/hooks/use-store";
 import { setHeaderParams } from "@/redux/pages";
 import { useIsDesktop } from "@/hooks/use-is-desktop";
@@ -155,7 +155,15 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
                                     className={`p-2 shadow dark:box-shadow-none rounded-l-xl ${activeItemId === cat.id ? "bg-white text-neutral-800" : "bg-[#eeeeee] dark:bg-[#192b39] text-[#333] dark:text-white"} text-center mb-3 text-2xs block w-full relative`}
                                 >
                                     <span className={`absolute block h-full w-1.5 right-0 top-0 ${activeItemId === cat.id ? "bg-gradient-to-t from-[#fe707b] to-[#ff9b91]" : "bg-transparent"}`} />
-                                    <Image src={cat.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${cat.Image.url}` : "/images/default-game.png"} alt={cat.Title} title={cat.Title} width={94} height={32} className="w-full h-8  block mb-2 object-contain px-2" />
+                                    <Image 
+                                        /* src={cat.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${cat.Image.url}` : "/images/default-game.png"}  */
+                                        src={cat.Image?.url || "/images/default-game.png"} 
+                                        alt={cat.Title} 
+                                        title={cat.Title} 
+                                        width={94} 
+                                        height={32} 
+                                        className="w-full h-8  block mb-2 object-contain px-2" 
+                                    />
                                     {cat.Title}
                                 </button>
                             ))}
@@ -183,7 +191,14 @@ const Categories: NextPage = ({ strapiData }: { strapiData?: StrapiData }) => {
                                         href={`${item.Slug}`}
                                         className="text-xs block text-center shadow dark:box-shadow-none bg-white rounded-xl p-4 text-black"
                                     >
-                                        <Image src={item.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${item.Image.url}` : "/images/default-game.png"} alt={item.Title} width={100} height={100} className="w-12 h-12 block mb-2 mx-auto" />
+                                        <Image 
+                                            /* src={item.Image?.url ? `${ServerAddress.Type}${ServerAddress.Strapi}/${item.Image.url}` : "/images/default-game.png"}  */
+                                            src={item.Image?.url || "/images/default-game.png"} 
+                                            alt={item.Title} 
+                                            width={100} 
+                                            height={100} 
+                                            className="w-12 h-12 block mb-2 mx-auto" 
+                                        />
                                         {item.Title}
                                     </Link>
                                 ))}
