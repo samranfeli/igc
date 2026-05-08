@@ -2,7 +2,6 @@
 
 import { getStrapiHighlight } from '@/actions/strapi'
 import ArrowTopLeft from '@/components/icons/ArrowTopLeft'
-import { ServerAddress } from '@/enum/url'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -191,11 +190,12 @@ const HighlightItemSlider: React.FC<Props> = (props) => {
           >
             <div className="bg-[#011425] rounded-2xl relative">
               <Image
-                src={
+/*                 src={
                   item.Image?.url
                     ? `${ServerAddress.Type}${ServerAddress.Strapi}${item.Image?.url}`
                     : 'default-game.png'
-                }
+                } */
+                src={item.Image?.url ||  'default-game.png'}
                 alt={item.Title || item.Subtitle || ''}
                 width={600}
                 height={1000}
@@ -210,7 +210,7 @@ const HighlightItemSlider: React.FC<Props> = (props) => {
                 <Link
                   prefetch={false}
                   href={item.Url || '#'}
-                  className="mx-4 text-sm block p-2 bg-gradient-to-t from-[#a839fe] to-[#fe81ff] rounded-full flex justify-between items-center"
+                  className="mx-4 text-sm p-2 bg-gradient-to-t from-[#a839fe] to-[#fe81ff] rounded-full flex justify-between items-center"
                 >
                   <span className="block w-10" />
                   خرید
@@ -224,15 +224,11 @@ const HighlightItemSlider: React.FC<Props> = (props) => {
 
           <div
             className={`absolute w-20 top-0 bottom-0 ${props.direction === "ltr" ? "-right-3" : "-left-3"}`}
-            onClick={() => {
-              goToNextSlide()
-            }}
+            onClick={goToNextSlide}
           />
           <div
             className={`absolute w-20 top-0 bottom-0 ${props.direction === "ltr" ? "-left-3" : "-right-3"}`}
-            onClick={() => {
-              goToPreviousSlide()
-            }}
+            onClick={goToPreviousSlide}
           />
         </div>
       ))}

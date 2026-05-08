@@ -145,25 +145,6 @@ useEffect(() => {
                           }}
                           dummyItems={highlight.dummyItems?.slice(0,20)}
                         />
-
-                        <div className="absolute bottom-1.5 right-3 flex gap-1 text-2xs items-center">
-                          <Image
-                            src={
-                              highlight?.Item?.Image.url
-                              //? `${ServerAddress.Type}${ServerAddress.Strapi}${highlight.Item.Image.url}`
-                                ? highlight.Item.Image.url
-                                : '/images/default-game.png'
-                            }
-                            alt={highlight?.Item?.Title || ''}
-                            width={64}
-                            height={64}
-                            className="block w-10 h-10"
-                            quality={50}
-                          />
-                          <span className='text-neutral-800 font-semibold'>
-                          {highlight?.Item?.Title}
-                          </span>
-                        </div>
                       </div>
                     </div>
                   )
