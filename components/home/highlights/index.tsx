@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import HighlightItemLink from './HighlightItemLink'
 import { HighlightItemType } from '@/types/highlight'
 import ModalPortal from '@/components/shared/layout/ModalPortal'
-import Image from 'next/image'
 import CloseSimple from '@/components/icons/CloseSimple'
 import HighlightItemSlider from './HighlightItemSlider'
 
